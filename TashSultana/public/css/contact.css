@@ -1,0 +1,24 @@
+#contact{
+	padding-bottom: 75px;
+}
+
+.subtitle{
+  display: inline-block;
+  vertical-align: top;
+  text-align: center;
+  margin-top: 50px; 
+}
+
+.subtitle div{
+	margin-bottom: 75px;
+}
+
+.subtitle.management{
+	margin-left: 125px;
+}
+
+.subtitle.booking{
+	margin-left: 202px;
+	padding-left: 100px;
+	border-left: 3px solid white;
+}

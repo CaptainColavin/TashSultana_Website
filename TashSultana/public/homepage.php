@@ -4,10 +4,17 @@
 <title>Tash Sultana</title>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<link rel="stylesheet" type="text/css" href="./css/contact.css">
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
 <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
 
 <style>
+
+body{
+  color: white;
+}
+
+
 ul {
     list-style-type: none;
     margin: 0;
@@ -159,18 +166,75 @@ table td.circle {
     <div id="music" class="tab-pane fade contenu">
       music
     </div>
+
     <div id="tour" class="tab-pane fade contenu">
       tour
     </div>
+
     <div id="store" class="tab-pane fade contenu">
       store
     </div>
+
     <div id="contact" class="tab-pane fade contenu">
-      contact
+        <h1 class="title text-center">Contact</h1>
+        <div class="subtitle management">
+          <h2 >Management</h2> <br/><br/>
+
+          <div>
+            <h4>Lemon Tree Music (ww) </h4>
+            <h4>REGAN LETHBRIDGE & DAVID MORGAN</h4>
+            <h5>info@lemontreemusic.com.au</h5>
+          </div>
+
+          <div>
+            <h4>LTM / UNIFIED (USA co mgmt)</h4>
+            <h4>JADDAN COMERFORD</h4>
+            <h5>www.weareunified.com​</h5>
+          </div>
+
+          <div>
+            <h4>LTM / PLUG N PLAY (UK / EU co mgmt)</h4>
+            <h4>DAVE TOETHUIS</h4>
+            <h5>dave.plugandplay@gmail.com</h5>
+          </div>
+
+        </div>
+
+        <div class="subtitle booking">
+          <h2>Booking</h2> <br/><br/>
+
+          <div>
+            <h4>FREE TRADE AGENCY (UK / EU) </h4>
+            <h4>PAUL BOSWELL</h4>
+            <h5>paulb@freetradeagency.co.uk</h5>
+          </div>
+
+          <div>
+            <h4>123 AGENCY (AUS / NZ / ROW)</h4>
+            <h4>REGAN LETHBRIDGE</h4>
+            <h5>regan@123agency.com.au</h5>
+          </div>
+
+          <div>
+            <h4>PARADIGM AGENCY (AMERICAS)</h4>
+            <h4>TOM WINDISH - JACKIE NALPANT - AARON PINKUS</h4>
+            <h5>tashsultanateam@paradigmagency.com</h5>
+          </div>
+
+          <div>
+            <h4>PARADIGM AGENCY (CANADA)</h4>
+            <h4>ROB ZIFARELLI</h4>
+            <h5>rzifarelli@paradigmagency.com</h5>
+          </div>
+
+        </div>
+
     </div>
+
     <div id="livre" class="tab-pane fade contenu">
       livre
     </div>
+
   </div>
 </div>
 
