@@ -7,97 +7,9 @@
 <link rel="stylesheet" type="text/css" href="./css/contact.css">
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
 <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="./css/countdown.css">
+<link rel="stylesheet" href="./css/style.css">
 
-<style>
-
-body{
-  color: white;
-}
-
-
-ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background-color: #333;
-}
-
-li {
-    float:none;
-    display:inline-block;
-    border-right: 1px solid #bbb;
-    text-align:center;
-    width:15%;
-}
-
-li a {
-    display: block;
-    color: white;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-}
-
-/* Change the link color to #111 (black) on hover */
-li a:hover {
-    background-color: #111;
-}
-
-.active {
-    background-color: #4CAF50;
-}
-
-#nav {
-    text-align:center;
-}
-
-#col {
-  margin-left: 0px;
-  margin-right: 0px;
-}
-
-#col-side {
-  margin-left: 0px;
-  margin-right: 0px;
-  margin-top: 70px;
-}
-
-.contenu {
-  background-color: #333;
-  text-align: center;
-  width:100%;
-  height:100%;
-  padding: 50px;
-}
-
-.countdownContainer {
-  background: #ddd;
-  border: 1px solid #999;
-  padding: 50px;
-  box-shadow: 0 0 5px 3px #ccc;
-  text-align:center;
-  margin: 0 auto;
-  border-collapse: separate;
-  width: 90%;
-  height: auto;
-}
-
-.countdownInfo {
-  font-size: 50px;
-  text-align: center;
-}
-
-table td.circle {
-  -moz-border-radius: 50px/50px;
-  -webkit-border-radius: 50px 50px;
-  border-radius: 50px/50px;
-  border: solid 2px #f00;
-  width: 100px;
-  height: 100px;
-}
-
-</style>
 </head>
 <body style="background-image:url(BackgroundTS.png); background-repeat: no-repeat; background-size: cover;">
 <div class="row">
@@ -138,28 +50,31 @@ table td.circle {
   <div class="tab-content">
     <div id="home" class="tab-pane fade in active contenu">
 
-      <table class="countdownContainer">
-        <thead>
- <tr class="countdownInfo">
-    <th>Next Concert</th>
- </tr>
-</thead>
-        <tr class="countdownInfo">
-            <td colspan="4">Next Concert</td>
-        </tr>
-        <tr class="countdownInfo">
-            <td id="days" class="circle">00</td>
-            <td id="hours" class="circle">00</td>
-            <td id="minutes" class="circle">00</td>
-            <td id="seconds" class="circle">00</td>
-        </tr>
-        <tr>
-            <td>Days</td>
-            <td>Hours</td>
-            <td>Minutes</td>
-            <td>Seconds</td>
-        </tr>
-      </table>
+
+<div class="bgimg">
+  <div class="top">
+    <h1>Next Concert</h1>
+    <p style="margin-top: 20px;">Danforth Musical Hall</p>
+    <p style="background-color: rgba(201, 201, 201, 0.16); margin-right:25%; margin-left:25%;">28 September, 2017. Toronto, ON, Canada</p>
+  </div>
+  <div class="middle">
+    <ul>
+      <li id="days" class="circle">00 Days</li>
+      <li id="hours" class="circle">00</li>
+      <li id="minutes" class="circle">00</li>
+      <li id="seconds" class="circle">00</li>
+    </ul>
+    <ul>
+      <li class="countdownValues">Days</li>
+      <li class="countdownValues">Hours</li>
+      <li class="countdownValues">Minutes</li>
+      <li class="countdownValues">Seconds</li>
+    </ul>
+  </div>
+  <div class="bottom"><a href="https://www.songkick.com/artists/5112228-tash-sultana"><button type="button" class="button button1">Buy Ticket</button></a></div>
+</div>
+
+
 
     </div>
 
@@ -253,18 +168,18 @@ table td.circle {
   <a href="https://www.youtube.com/user/tashsultana01" target="_blank">
     <img src="YTLogo.png" alt="Logo Youtube"> <br/>
   </a>
-
 </div>
-    <script type="text/javascript">
+
+<script type="text/javascript">
     $(document).ready(function(){
         $("#myTab a").click(function(e){
             e.preventDefault();
             $(this).tab('show');
         });
     });
-    </script>
+</script>
 
-    <script type="text/javascript">
+<script type="text/javascript">
     function countdown() {
       var now = new Date();
       var eventDate = new Date("Sep 28, 2017 19:00:00");
@@ -298,7 +213,7 @@ table td.circle {
     }
 
     countdown();
-    </script>
+</script>
 
 </body>
 </html>
