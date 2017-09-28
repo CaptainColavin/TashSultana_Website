@@ -19,3 +19,8 @@ Route::get('/', function () {
 /*Route::get('/test', function () {
   return redirect('/test.php');
 });*/
+
+Route::get('/tour', function () {
+    //return view('welcome');
+    return redirect('/songkick.php');
+});
