@@ -4,9 +4,10 @@
 <title>Tash Sultana</title>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
 <link rel="stylesheet" type="text/css" href="./css/contact.css">
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+
 <style>
 
 body{
@@ -63,11 +64,42 @@ li a:hover {
 }
 
 .contenu {
-  background-color: #333
+  background-color: #333;
+  text-align: center;
+  width:100%;
+  height:100%;
+  padding: 50px;
 }
+
+.countdownContainer {
+  background: #ddd;
+  border: 1px solid #999;
+  padding: 50px;
+  box-shadow: 0 0 5px 3px #ccc;
+  text-align:center;
+  margin: 0 auto;
+  border-collapse: separate;
+  width: 90%;
+  height: auto;
+}
+
+.countdownInfo {
+  font-size: 50px;
+  text-align: center;
+}
+
+table td.circle {
+  -moz-border-radius: 50px/50px;
+  -webkit-border-radius: 50px 50px;
+  border-radius: 50px/50px;
+  border: solid 2px #f00;
+  width: 100px;
+  height: 100px;
+}
+
 </style>
 </head>
-<body style="background-image:url(BackgroundTS.png); background-repeat: no-repeat;background-size:cover;">
+<body style="background-image:url(BackgroundTS.png); background-repeat: no-repeat; background-size: cover;">
 <div class="row">
   <div class="span12"> <img src="TSTitle.png" alt="TashSultanaTitle" style="width: 504px; height: 76px; object-fit: cover; text-align: center; margin-right: auto; margin-left: auto; display: block; margin-bottom: 10px;"> </div>
 </div>
@@ -103,20 +135,32 @@ li a:hover {
 </nav>
 
 <div class="center">
-    <div class="tab-content">
-        <div id="home" class="tab-pane fade in active contenu">
-            okokookokokko
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
+  <div class="tab-content">
+    <div id="home" class="tab-pane fade in active contenu">
+
+      <table class="countdownContainer">
+        <thead>
+ <tr class="countdownInfo">
+    <th>Next Concert</th>
+ </tr>
+</thead>
+        <tr class="countdownInfo">
+            <td colspan="4">Next Concert</td>
+        </tr>
+        <tr class="countdownInfo">
+            <td id="days" class="circle">00</td>
+            <td id="hours" class="circle">00</td>
+            <td id="minutes" class="circle">00</td>
+            <td id="seconds" class="circle">00</td>
+        </tr>
+        <tr>
+            <td>Days</td>
+            <td>Hours</td>
+            <td>Minutes</td>
+            <td>Seconds</td>
+        </tr>
+      </table>
+
     </div>
 
     <div id="music" class="tab-pane fade contenu">
@@ -184,7 +228,7 @@ li a:hover {
           </div>
 
         </div>
-         
+
     </div>
 
     <div id="livre" class="tab-pane fade contenu">
@@ -197,11 +241,19 @@ li a:hover {
 </div>
 
 <div class="col-md-2 col-md-offset-2" id="col-side">
-Facebook logo<br/>
-Twitter logo<br/>
-Youtube logo<br/>
-Instagram logo<br/>
-...
+  <a href="https://www.facebook.com/tashsultanamusic/" target="_blank">
+    <img src="FacebookLogo.png" alt="Logo Instagram">
+  </a> <br/>
+  <a href="https://www.instagram.com/tashsultanaofficial/" target="_blank">
+    <img src="InstaLogo.png" alt="Logo Instagram"> <br/>
+  </a>
+  <a href="https://twitter.com/tashsultanaa" target="_blank">
+    <img src="TwitterLogo.png" alt="Logo Twitter"> <br/>
+  </a>
+  <a href="https://www.youtube.com/user/tashsultana01" target="_blank">
+    <img src="YTLogo.png" alt="Logo Youtube"> <br/>
+  </a>
+
 </div>
     <script type="text/javascript">
     $(document).ready(function(){
@@ -211,5 +263,42 @@ Instagram logo<br/>
         });
     });
     </script>
+
+    <script type="text/javascript">
+    function countdown() {
+      var now = new Date();
+      var eventDate = new Date("Sep 28, 2017 19:00:00");
+
+      var currentTime = now.getTime();
+      var eventTime = eventDate.getTime();
+
+      var finalTime = eventTime - currentTime;
+
+      var s = Math.floor(finalTime / 1000);
+      var m = Math.floor(s / 60);
+      var h = Math.floor(m / 60);
+      var d = Math.floor(h / 24);
+
+      h %= 24;
+      m %= 60;
+      s %= 60;
+
+      h = (h < 10) ? "0" + h : h;
+      m = (m < 10) ? "0" + m : m;
+      s = (s < 10) ? "0" + s : s;
+
+      document.getElementById("days").textContent = d;
+      document.getElementById("days").innerText = d;
+
+      document.getElementById("hours").textContent = h;
+      document.getElementById("minutes").textContent = m;
+      document.getElementById("seconds").textContent = s;
+
+      setTimeout(countdown, 1000);
+    }
+
+    countdown();
+    </script>
+
 </body>
 </html>
