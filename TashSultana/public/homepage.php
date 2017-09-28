@@ -67,7 +67,7 @@ li a:hover {
 }
 </style>
 </head>
-<body style="background-image:url(BackgroundTS.png)">
+<body style="background-image:url(BackgroundTS.png); background-repeat: no-repeat;background-size:cover;">
 <div class="row">
   <div class="span12"> <img src="TSTitle.png" alt="TashSultanaTitle" style="width: 504px; height: 76px; object-fit: cover; text-align: center; margin-right: auto; margin-left: auto; display: block; margin-bottom: 10px;"> </div>
 </div>
