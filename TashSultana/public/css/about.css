@@ -1,0 +1,18 @@
+#about.contenu{
+  height:175%;
+}
+
+.txt{
+  text-align: left;
+  margin-left: 25%;
+}
+
+.r2{
+margin-top: 5%;
+}
+
+.r2 .txt{
+  margin-left: 16%;
+  margin-right: 9.5%;
+  text-align: right;
+}

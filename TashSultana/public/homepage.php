@@ -5,6 +5,7 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <link rel="stylesheet" type="text/css" href="./css/contact.css">
+<link rel="stylesheet" type="text/css" href="./css/about.css">
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
 <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
 
@@ -12,6 +13,7 @@
 
 body{
   color: white;
+  font-family: Arial;
 }
 
 
@@ -129,6 +131,7 @@ table td.circle {
       <li role="presentation"><a href="#tour" aria-controls="tour" role="tab" data-toggle="tab">Tour</a></li>
       <li role="presentation"><a href="#store" aria-controls="store" role="tab" data-toggle="tab">Store</a></li>
       <li role="presentation"><a href="#contact" aria-controls="contact" role="tab" data-toggle="tab">Contact</a></li>
+      <li role="presentation"><a href="#about" aria-controls="about" role="tab" data-toggle="tab">About</a></li>
       <li role="presentation"><a href="#livre" aria-controls="livre" role="tab" data-toggle="tab">Livre d'or</a></li>
     </ul>
 </div>
@@ -173,6 +176,40 @@ table td.circle {
 
     <div id="store" class="tab-pane fade contenu">
       store
+    </div>
+
+    <div id="about" class="tab-pane fade contenu container">
+
+        <div class="row">
+            <div class="col-sm-4">
+                <img  src="About_Tash.png" alt="Tash Sultana">
+            </div>
+            <div class="col-sm-4 txt">
+                Tash Sultana is a young, dynamic Melbourne artist creating waves and generating massive street buzz by playing sold out shows all over the World.
+                   Tash has made a name for herself busking on the streets of Melbourne and having homemade videos go viral getting millions of views online. <br/><br/>
+                   Since having her hands wrapped around a guitar at the age of three, the self taught artist quickly developed her own unique style that has people
+                    lining up to see her perform. Her vocal shines with a magical quality, she has a natural gift for melody and her virtuosic guitar playing is from another planet.
+            </div>
+        </div>
+
+        <br/><hr/>
+
+        <div class="row r2">
+            <div class="col-sm-4 txt">
+              The young, one-woman powerhouse has literally sold out every headline show booked across multiple countries and played dozens of high profile festivals including
+              Laneway and Splendour In The Grass 2017. Both singles ‘Jungle’ and ‘Notion’ were quick to receive high rotation on Australian broadcaster triple j with ‘Jungle’ been
+              added as mega hit of the week on Netherlands 3FM radio and is picking up rotation on stations across North America. <br/><br/>
+              Accolades include a #8 ARIA album chart, topping the iTunes chart with her “Notion EP”, ‘Jungle’ coming in at #3 on triple j’s hottest 100, exceeding platinum sales
+              for ‘Jungle’, winning a J award in 2016, an APRA Award nomination and tens of millions of streams Worldwide.
+            </div>
+            <div class="col-sm-4">
+                <img  src="About_Tash2.png" alt="Tash Sultana" style="width: 125%;height:20%;">
+            </div>
+        </div>
+
+          <br/><hr/><br/>
+
+          <iframe width="1220" height="720" src="https://www.youtube.com/embed/RBw08GbrR-g" frameborder="0" allowfullscreen></iframe>
     </div>
 
     <div id="contact" class="tab-pane fade contenu">
