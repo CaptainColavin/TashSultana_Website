@@ -48,35 +48,52 @@
 </div>
 </nav>
 
+<?php
+  $json = file_get_contents('http://api.songkick.com/api/3.0/artists/5112228/calendar.json?apikey=5OnUMhFOovUJseOG');
+
+  $array = json_decode($json);
+
+  $tours=array();
+  foreach ($array->resultsPage->results->event as $key => $value) {
+      $tours[$key]=$value;
+  }
+
+  function TimeFormat($date) {
+    $time = DateTime::createFromFormat('Y-m-d\TH:i:sP', $date);
+    $raw = $time->format(DateTime::RFC850);
+
+    return $raw;
+  }
+
+?>
+
 <div class="center">
   <div class="tab-content">
     <div id="home" class="tab-pane fade in active contenu">
 
-
-<div class="bgimg">
-  <div class="top">
-    <h1>Next Concert</h1>
-    <p style="margin-top: 20px;">Danforth Musical Hall</p>
-    <p style="background-color: rgba(201, 201, 201, 0.16); margin-right:25%; margin-left:25%;">28 September, 2017. Toronto, ON, Canada</p>
-  </div>
-  <div class="middle">
-    <ul>
-      <li id="days" class="circle">00 Days</li>
-      <li id="hours" class="circle">00</li>
-      <li id="minutes" class="circle">00</li>
-      <li id="seconds" class="circle">00</li>
-    </ul>
-    <ul>
-      <li class="countdownValues">Days</li>
-      <li class="countdownValues">Hours</li>
-      <li class="countdownValues">Minutes</li>
-      <li class="countdownValues">Seconds</li>
-    </ul>
-  </div>
-  <div class="bottom"><a href="https://www.songkick.com/artists/5112228-tash-sultana"><button type="button" class="button button1">Buy Ticket</button></a></div>
-</div>
-
-
+      <div class="bgimg">
+        <div class="top">
+          <h1 style="background-color: rgba(201, 201, 201, 0.16); margin-right:30%; margin-left:30%;">Next Concert</h1>
+          <p style="background-color: rgba(201, 201, 201, 0.16); margin-top: 20px; margin-right:40%; margin-left:40%;"><?= $tours[0]->venue->displayName ?></p>
+          <p style="background-color: rgba(201, 201, 201, 0.16); margin-right:35%; margin-left:35%;"><?= $tours[0]->location->city ?></p>
+          <p style="background-color: rgba(201, 201, 201, 0.16); margin-right:30%; margin-left:30%;"><?= TimeFormat($tours[0]->start->datetime); ?></p>
+        </div>
+        <div class="middle">
+          <ul style="background-color: rgba(201, 201, 201, 0.16); margin-right:15%; margin-left:15%;">
+            <li id="days" class="circle">00 Days</li>
+            <li id="hours" class="circle">00</li>
+            <li id="minutes" class="circle">00</li>
+            <li id="seconds" class="circle">00</li>
+          </ul>
+          <ul style="background-color: rgba(201, 201, 201, 0.16); margin-right:15%; margin-left:15%;">
+            <li class="countdownValues">Days</li>
+            <li class="countdownValues">Hours</li>
+            <li class="countdownValues">Minutes</li>
+            <li class="countdownValues">Seconds</li>
+          </ul>
+        </div>
+        <div class="bottom"><a href="https://www.songkick.com/artists/5112228-tash-sultana"><button type="button" class="button button1">Buy Ticket</button></a></div>
+      </div>
 
     </div>
 
@@ -85,7 +102,25 @@
     </div>
 
     <div id="tour" class="tab-pane fade contenu">
-      tour
+      Tours
+      <br/>
+      <br/>
+<table>
+<tr>
+<th>Place </th>
+<th>City </th>
+<th>Time </th>
+</tr>
+
+<?php foreach($tours as $key => $value) {?>
+<tr>
+<td><?= $value->venue->displayName ?></td>
+<td><?= $value->location->city ?></td>
+<td></td>
+</tr>
+<?php } ?>
+
+</table>
     </div>
 
     <div id="store" class="tab-pane fade contenu">
@@ -217,8 +252,10 @@
 
 <script type="text/javascript">
     function countdown() {
+      var NextConcertDate = "<?php echo TimeFormat($tours[0]->start->datetime); ?>";
+      //document.write(NextConcertDate);
       var now = new Date();
-      var eventDate = new Date("Sep 28, 2017 19:00:00");
+      var eventDate = new Date(NextConcertDate);
 
       var currentTime = now.getTime();
       var eventTime = eventDate.getTime();
