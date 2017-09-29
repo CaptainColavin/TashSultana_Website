@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateBookTable extends Migration
+class CreateGoldenbookTable extends Migration
 {
     /**
      * Run the migrations.
@@ -15,11 +15,15 @@ class CreateBookTable extends Migration
     {
         Schema::create('goldenbook', function (Blueprint $table) {
             $table->increments('id');
-            $table->foreign('user_id')->references('id')->on('users');
             $table->DateTime('date');
             $table->string('text');
             $table->rememberToken();
             $table->timestamps();
+        });
+
+        Schema::table('goldenbook', function (Blueprint $table) {
+            $table->integer('user_id')->unsigned();
+            $table->foreign('user_id')->references('id')->on('users');
         });
     }
 
