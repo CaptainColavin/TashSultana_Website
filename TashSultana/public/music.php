@@ -8,6 +8,7 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+<script src="https://www.youtube.com/iframe_api"></script>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/assets/owl.carousel.min.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/assets/owl.theme.default.css">
 <style>
@@ -227,9 +228,6 @@ okokookokokko
                     </iframe>
                 </div> -->
 
-                <div id="music1"></div>
-                <div id="music2"></div>
-                <div id="music3"></div>
 
             </div>`
         </div>
@@ -273,13 +271,7 @@ Instagram logo<br/>
             e.preventDefault();
             $(this).tab('show');
         });
-        $(".owl-carousel").owlCarousel({
-            center: true,
-            items: 1,
-            nav: true,
-            video:true,
-            infinite: true
-        });
+
         $( ".owl-next" ).empty();
         $( ".owl-prev" ).empty();
     });
@@ -294,33 +286,48 @@ Instagram logo<br/>
     // 3. This function creates an <iframe> (and YouTube player)
     //    after the API code downloads.
     var player;
-    function onYouTubeIframeAPIReady() {
-      player = new YT.Player('music1', {
-        width: '500px',
-        videoId: 'M7lc1UVf-VE',
-        events: {
-          'onReady': onPlayerReady,
-          'onStateChange': onPlayerStateChange
+
+    function initYoutubeVideos(list) {
+        for (var i=0; i < list.length; i++) {
+            if (list[i]) {
+                var classCount = 'music' + i;
+                $('.owl-carousel').append(
+                  $('<div/>')
+                    .attr("id", classCount)
+                );
+
+                player = new YT.Player('music1', {
+                    width: '500px',
+                    videoId: 'list[i]',
+                    events: {}
+                });
+            }
         }
-      });
-      player = new YT.Player('music2', {
-        width: '500px',
-        videoId: 'M7lc1UVf-VE',
-        events: {
-          'onReady': onPlayerReady,
-          'onStateChange': onPlayerStateChange
-        }
-      });
-      player = new YT.Player('music3', {
-        width: '500px',
-        videoId: 'M7lc1UVf-VE',
-        events: {
-          'onReady': onPlayerReady,
-          'onStateChange': onPlayerStateChange
-        }
-      });
+        $(".owl-carousel").owlCarousel({
+            center: true,
+            items: 1,
+            nav: true,
+            video:true,
+            infinite: true,
+            margin: 30
+        });
+
     }
 
+    function httpGetAsync() {
+        var xmlHttp = new XMLHttpRequest();
+        xmlHttp.onreadystatechange = function() {
+            if (xmlHttp.readyState == 4 && xmlHttp.status == 200)
+                extractVideosUrl(xmlHttp.responseText);
+        }
+        xmlHttp.open("GET", 'https://www.googleapis.com/youtube/v3/search?part=snippet&channelId=UCdXHuzr3AS3iyPxKSBK15oQ&maxResults=50&key=AIzaSyCNlwCYVUGCSGepeAxUQbI9UffBUUoiEpE', true); // true for asynchronous
+        xmlHttp.send(null);
+    }
+
+
+    function onYouTubeIframeAPIReady() {
+        httpGetAsync();
+    }
 
     // 4. The API will call this function when the video player is ready.
     function onPlayerReady(event) {
@@ -340,7 +347,22 @@ Instagram logo<br/>
     function stopVideo() {
       player.stopVideo();
     }
+
+    function extractVideosUrl (json) {
+        var obj = JSON.parse(json);
+        console.log(obj);
+        var listOfVideo = [];
+        for (var item of obj.items) {
+            listOfVideo.push(item.id.videoId);
+        }
+        initYoutubeVideos(listOfVideo);
+
+    }
+
+
+
     </script>
 </body>
+
 <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/owl.carousel.min.js"></script>
 </html>
