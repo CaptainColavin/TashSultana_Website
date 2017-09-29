@@ -11,13 +11,14 @@
 </html>
 
 <script type="text/javascript">
-	
-	
-	
+
+
+
 
 
 		$.getJSON("http://api.songkick.com/api/3.0/artists/5112228/calendar.json?apikey=5OnUMhFOovUJseOG",
 		function(data){
+			console.log(data);
 
 				$.each(data.results, function(key, val) {
   				var tr=$('<tr></tr>');
