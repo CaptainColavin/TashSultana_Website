@@ -21,17 +21,18 @@
   <div class="container-fluid">
 
 <div class="col-md-2 col-md-offset-2" id="col-side">
-<iframe src="https://open.spotify.com/embed?uri=spotify:album:7JV505O1I9Sc3uHtFEFtkf" width="250" height="380" frameborder="0" allowtransparency="true"></iframe>
+  <iframe src="https://open.spotify.com/embed?uri=spotify:album:7JV505O1I9Sc3uHtFEFtkf" width="250" height="380" frameborder="0" allowtransparency="true"></iframe>
+  <br/>
+  <iframe src="https://open.spotify.com/embed?uri=spotify:album:00yAwDfu7JLRlhvHSchMzu" width="250" frameborder="0" allowtransparency="true"></iframe>
 </div>
 
 
   <div class="col-md-8 col-md-offset-2" id="col">
-    <nav class="navbar navbar-default" id="nav">
+    <nav class="my_nav" id="nav">
       <!-- Brand and toggle get grouped for better mobile display -->
       <?php /*<div class="navbar-header">
         Bonjour
       </div>*/ ?>
-  <div class="collapse navbar-collapse" style="padding-right:0px; padding-left:0px">
     <!-- Brand and toggle get grouped for better mobile display -->
     <ul role="tablist">
       <li role="presentation"><a href="#home" class="active" aria-controls="home" role="tab" data-toggle="tab">Home<span class="sr-only">(current)</span></a></li>
@@ -42,12 +43,11 @@
         </ul>
       </li>
       <li role="presentation"><a href="#tour" aria-controls="tour" role="tab" data-toggle="tab">Tour</a></li>
-      <li role="presentation"><a href="#store" aria-controls="store" role="tab" data-toggle="tab">Store</a></li>
+      <li role="presentation"><a href="https://24hundred.net/collections/tash-sultana?Tash+Sultana+Store" target="_blank">Store</a></li>
       <li role="presentation"><a href="#contact" aria-controls="contact" role="tab" data-toggle="tab">Contact</a></li>
       <li role="presentation"><a href="#about" aria-controls="about" role="tab" data-toggle="tab">About</a></li>
       <li role="presentation"><a href="#livre" aria-controls="livre" role="tab" data-toggle="tab">Livre d'or</a></li>
     </ul>
-</div>
 </nav>
 
 <?php
@@ -66,7 +66,6 @@
 
     return $raw;
   }
-
 ?>
 
 <div class="center">
@@ -94,8 +93,18 @@
             <li class="countdownValues">Seconds</li>
           </ul>
         </div>
-        <div class="bottom"><a href="https://www.songkick.com/artists/5112228-tash-sultana"><button type="button" class="button button1">Buy Ticket</button></a></div>
+        <div class="bottom"><a href="https://www.songkick.com/artists/5112228-tash-sultana" target="_blank"><button type="button" class="button button1">Buy Ticket</button></a></div>
       </div>
+      <hr>
+      <div class="embed-responsive embed-responsive-16by9">
+        <iframe class="embed-responsive-item" id="youtube_video" width="1100" height="620" frameborder="0" allowfullscreen></iframe>
+      </div>
+      <hr>
+      <h2>Last Tash Sultana's Song : Mystik</h2>
+      <div class="embed-responsive embed-responsive-16by9">
+        <iframe class="embed-responsive-item" width="1100" height="620" src="https://www.youtube.com/embed/NAlt1aWdfe4" frameborder="0" allowfullscreen></iframe>
+      </div>
+
 
     </div>
 
@@ -108,18 +117,20 @@
       <br/>
       <br/>
 <div class="table-responsive">
-<table class="table table-bordered table-hover" style="text-align: center;">
+<table class="table table-striped table-data">
 <tr>
-<th>Place </th>
-<th>City </th>
-<th>Time </th>
+<th>Place</th>
+<th>City</th>
+<th>Time</th>
+<th>Buy Ticket</th>
 </tr>
 
-<?php foreach($tours as $key => $value) {  $date = new DateTime($value->start->datetime); $date = $date->format('Y-m-d H:i');?>
+<?php foreach($tours as $key => $value) { $date = new DateTime($value->start->datetime); $date = $date->format('Y-m-d H:i');?>
 <tr>
 <td><?= $value->venue->displayName ?></td>
 <td><?= $value->location->city ?></td>
 <td><?= $date ?></td>
+<td><a href="<?= $value->uri ?>" target="_blank">Buy Ticket</a></td>
 </tr>
 <?php } ?>
 
@@ -127,10 +138,6 @@
 </div>
     </div>
 
-    <div id="store" class="tab-pane fade contenu">
-      store
-    </div>
-<!------------------------------------------------------------------------------>
     <div id="about" class="tab-pane fade contenu container">
       <div class="row">
         <img class="col-lg-5 col-lg-offset-1  img-responsive"  src="About_Tash.png" alt="Tash Sultana">
@@ -253,6 +260,7 @@
 </div>
 
 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 
 <script type="text/javascript">
     $(document).ready(function(){
@@ -299,6 +307,15 @@
     }
 
     countdown();
+</script>
+
+<script>var channelID = "UCdXHuzr3AS3iyPxKSBK15oQ";
+  $.getJSON('https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fwww.youtube.com%2Ffeeds%2Fvideos.xml%3Fchannel_id%3D'+channelID, function(data) {
+     var link = data.items[0].link;
+     //alert(link);
+     var id = link.substr(link.indexOf("=")+1);
+      $("#youtube_video").attr("src","https://youtube.com/embed/"+id);
+  });
 </script>
 
 </body>
