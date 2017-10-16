@@ -1,24 +1,10 @@
-#contact.contenu {
-	padding: -50px;
+@media (max-width: 991px) {
+
+.subtitle h2{
+	margin-top: 50px;
+	padding-top: 8px;
+	margin-bottom: -25px;
+	border-top: dashed 5px grey;
 }
 
-.subtitle{
-  display: inline-block;
-  vertical-align: top;
-  text-align: center;
-  margin-top: 50px;
-}
-
-.subtitle div{
-	margin-bottom: 75px;
-}
-
-.subtitle.management{
-	margin-left: 10px;
-}
-
-.subtitle.booking{
-	margin-left: 202px;
-	padding-left: 100px;
-	border-left: 3px solid white;
 }
