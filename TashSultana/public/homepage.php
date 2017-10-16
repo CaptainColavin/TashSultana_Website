@@ -12,10 +12,13 @@
 <link rel="stylesheet" href="./css/style.css">
 
 </head>
+
 <body style="background-image:url(BackgroundTS.png); background-repeat: no-repeat; background-size: cover;">
 <div class="row">
   <div class="span12"> <img src="TSTitle.png" alt="TashSultanaTitle" style="width: 504px; height: 76px; object-fit: cover; text-align: center; margin-right: auto; margin-left: auto; display: block; margin-bottom: 10px;"> </div>
 </div>
+<div class="row">
+  <div class="container-fluid">
 
 <div class="col-md-2 col-md-offset-2" id="col-side">
 <iframe src="https://open.spotify.com/embed?uri=spotify:album:7JV505O1I9Sc3uHtFEFtkf" width="250" height="380" frameborder="0" allowtransparency="true"></iframe>
@@ -23,7 +26,6 @@
 
 
   <div class="col-md-8 col-md-offset-2" id="col">
-
     <nav class="navbar navbar-default" id="nav">
       <!-- Brand and toggle get grouped for better mobile display -->
       <?php /*<div class="navbar-header">
@@ -102,25 +104,27 @@
     </div>
 
     <div id="tour" class="tab-pane fade contenu">
-      Tours
+      <h1>Tours</h1>
       <br/>
       <br/>
-<table>
+<div class="table-responsive">
+<table class="table table-bordered table-hover" style="text-align: center;">
 <tr>
 <th>Place </th>
 <th>City </th>
 <th>Time </th>
 </tr>
 
-<?php foreach($tours as $key => $value) {?>
+<?php foreach($tours as $key => $value) {  $date = new DateTime($value->start->datetime); $date = $date->format('Y-m-d H:i');?>
 <tr>
 <td><?= $value->venue->displayName ?></td>
 <td><?= $value->location->city ?></td>
-<td></td>
+<td><?= $date ?></td>
 </tr>
 <?php } ?>
 
 </table>
+</div>
     </div>
 
     <div id="store" class="tab-pane fade contenu">
@@ -244,6 +248,11 @@
     <img src="YTLogo.png" alt="Logo Youtube"> <br/>
   </a>
 </div>
+
+</div>
+</div>
+
+
 
 <script type="text/javascript">
     $(document).ready(function(){
