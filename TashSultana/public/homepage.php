@@ -4,8 +4,8 @@
 <title>Tash Sultana</title>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-<link rel="stylesheet" type="text/css" href="./css/contact.css">
-<link rel="stylesheet" type="text/css" href="./css/about.css">
+<!--<link rel="stylesheet" type="text/css" href="./css/contact.css">-->
+<!--<link rel="stylesheet" type="text/css" href="./css/about.css">-->
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
 <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
 <link rel="stylesheet" href="./css/countdown.css">
@@ -139,95 +139,100 @@
     </div>
 
     <div id="about" class="tab-pane fade contenu container">
-
-        <div class="row">
-            <div class="col-sm-4">
-                <img  src="About_Tash.png" alt="Tash Sultana">
-            </div>
-            <div class="col-sm-4 txt">
-                Tash Sultana is a young, dynamic Melbourne artist creating waves and generating massive street buzz by playing sold out shows all over the World.
-                   Tash has made a name for herself busking on the streets of Melbourne and having homemade videos go viral getting millions of views online. <br/><br/>
-                   Since having her hands wrapped around a guitar at the age of three, the self taught artist quickly developed her own unique style that has people
-                    lining up to see her perform. Her vocal shines with a magical quality, she has a natural gift for melody and her virtuosic guitar playing is from another planet.
-            </div>
+      <div class="row">
+        <div class="col-md-4">
+          <img  src="About_Tash.png" alt="Tash Sultana">
         </div>
-
-        <br/><hr/>
-
-        <div class="row r2">
-            <div class="col-sm-4 txt">
-              The young, one-woman powerhouse has literally sold out every headline show booked across multiple countries and played dozens of high profile festivals including
-              Laneway and Splendour In The Grass 2017. Both singles ‘Jungle’ and ‘Notion’ were quick to receive high rotation on Australian broadcaster triple j with ‘Jungle’ been
-              added as mega hit of the week on Netherlands 3FM radio and is picking up rotation on stations across North America. <br/><br/>
-              Accolades include a #8 ARIA album chart, topping the iTunes chart with her “Notion EP”, ‘Jungle’ coming in at #3 on triple j’s hottest 100, exceeding platinum sales
-              for ‘Jungle’, winning a J award in 2016, an APRA Award nomination and tens of millions of streams Worldwide.
-            </div>
-            <div class="col-sm-4">
-                <img  src="About_Tash2.png" alt="Tash Sultana" style="width: 125%;height:20%;">
-            </div>
+        <div class="col-md-4 col-md-offset-3">
+            Tash Sultana is a young, dynamic Melbourne artist creating waves and generating massive street buzz by playing sold out shows all over the World.
+               Tash has made a name for herself busking on the streets of Melbourne and having homemade videos go viral getting millions of views online. <br/><br/>
+               Since having her hands wrapped around a guitar at the age of three, the self taught artist quickly developed her own unique style that has people
+                lining up to see her perform. Her vocal shines with a magical quality, she has a natural gift for melody and her virtuosic guitar playing is from another planet.
         </div>
-
-          <br/><hr/><br/>
-
-          <iframe width="1220" height="720" src="https://www.youtube.com/embed/RBw08GbrR-g" frameborder="0" allowfullscreen></iframe>
+      </div>
+      <hr/>
+      <div class="row">
+          <div class="col-md-4 col-md-offset-1">
+            The young, one-woman powerhouse has literally sold out every headline show booked across multiple countries and played dozens of high profile festivals including
+            Laneway and Splendour In The Grass 2017. Both singles ‘Jungle’ and ‘Notion’ were quick to receive high rotation on Australian broadcaster triple j with ‘Jungle’ been
+            added as mega hit of the week on Netherlands 3FM radio and is picking up rotation on stations across North America. <br/><br/>
+            Accolades include a #8 ARIA album chart, topping the iTunes chart with her “Notion EP”, ‘Jungle’ coming in at #3 on triple j’s hottest 100, exceeding platinum sales
+            for ‘Jungle’, winning a J award in 2016, an APRA Award nomination and tens of millions of streams Worldwide.
+          </div>
+          <div class="col-md-4 col-md-offset-2">
+              <img  src="About_Tash2.jpg" alt="Tash Sultana">
+          </div>
+      </div>
+      <br/><hr><br/>
+      <iframe class="col-md-12" width="1220" height="720" src="https://www.youtube.com/embed/RBw08GbrR-g" frameborder="0" allowfullscreen></iframe>
     </div>
 
+<!------------------------------------------------------------------------------>
     <div id="contact" class="tab-pane fade contenu">
-        <h1 class="title text-center">Contact</h1>
-        <div class="subtitle management">
-          <h2 >Management</h2> <br/><br/>
+      <div class="row">
+        <div class="col-md-12">
+          <h1 class="title text-center">Contact</h1>
+            <div class="row">
+              <div class="col-md-6">
+                <div class="subtitle management">
+                  <h2 >Management</h2> <br/><br/>
 
-          <div>
-            <h4>Lemon Tree Music (ww) </h4>
-            <h4>REGAN LETHBRIDGE & DAVID MORGAN</h4>
-            <h5>info@lemontreemusic.com.au</h5>
-          </div>
+                  <div>
+                    <h4>Lemon Tree Music (ww) </h4>
+                    <h4>REGAN LETHBRIDGE & DAVID MORGAN</h4>
+                    <h5>info@lemontreemusic.com.au</h5>
+                  </div>
+                  <hr style="border-top: dotted 1px;" />
+                  <div>
+                    <h4>LTM / UNIFIED (USA co mgmt)</h4>
+                    <h4>JADDAN COMERFORD</h4>
+                    <h5>www.weareunified.com​</h5>
+                  </div>
+                  <hr style="border-top: dotted 1px;" />
+                  <div>
+                    <h4>LTM / PLUG N PLAY (UK / EU co mgmt)</h4>
+                    <h4>DAVE TOETHUIS</h4>
+                    <h5>dave.plugandplay@gmail.com</h5>
+                  </div>
 
-          <div>
-            <h4>LTM / UNIFIED (USA co mgmt)</h4>
-            <h4>JADDAN COMERFORD</h4>
-            <h5>www.weareunified.com​</h5>
-          </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="subtitle booking">
+                  <h2>Booking</h2> <br/><br/>
 
-          <div>
-            <h4>LTM / PLUG N PLAY (UK / EU co mgmt)</h4>
-            <h4>DAVE TOETHUIS</h4>
-            <h5>dave.plugandplay@gmail.com</h5>
-          </div>
+                  <div>
+                    <h4>FREE TRADE AGENCY (UK / EU) </h4>
+                    <h4>PAUL BOSWELL</h4>
+                    <h5>paulb@freetradeagency.co.uk</h5>
+                  </div>
+                  <hr style="border-top: dotted 1px;" />
+                  <div>
+                    <h4>123 AGENCY (AUS / NZ / ROW)</h4>
+                    <h4>REGAN LETHBRIDGE</h4>
+                    <h5>regan@123agency.com.au</h5>
+                  </div>
+                  <hr style="border-top: dotted 1px;" />
+                  <div>
+                    <h4>PARADIGM AGENCY (AMERICAS)</h4>
+                    <h4>TOM WINDISH - JACKIE NALPANT - AARON PINKUS</h4>
+                    <h5>tashsultanateam@paradigmagency.com</h5>
+                  </div>
+                  <hr style="border-top: dotted 1px;" />
+                  <div>
+                    <h4>PARADIGM AGENCY (CANADA)</h4>
+                    <h4>ROB ZIFARELLI</h4>
+                    <h5>rzifarelli@paradigmagency.com</h5>
+                  </div>
 
+                </div>
+              </div>
+            </div>
         </div>
-
-        <div class="subtitle booking">
-          <h2>Booking</h2> <br/><br/>
-
-          <div>
-            <h4>FREE TRADE AGENCY (UK / EU) </h4>
-            <h4>PAUL BOSWELL</h4>
-            <h5>paulb@freetradeagency.co.uk</h5>
-          </div>
-
-          <div>
-            <h4>123 AGENCY (AUS / NZ / ROW)</h4>
-            <h4>REGAN LETHBRIDGE</h4>
-            <h5>regan@123agency.com.au</h5>
-          </div>
-
-          <div>
-            <h4>PARADIGM AGENCY (AMERICAS)</h4>
-            <h4>TOM WINDISH - JACKIE NALPANT - AARON PINKUS</h4>
-            <h5>tashsultanateam@paradigmagency.com</h5>
-          </div>
-
-          <div>
-            <h4>PARADIGM AGENCY (CANADA)</h4>
-            <h4>ROB ZIFARELLI</h4>
-            <h5>rzifarelli@paradigmagency.com</h5>
-          </div>
-
-        </div>
+      </div>
 
     </div>
-
+<!------------------------------------------------------------------------------>
     <div id="livre" class="tab-pane fade contenu">
       livre
     </div>
