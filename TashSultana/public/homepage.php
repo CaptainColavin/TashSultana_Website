@@ -24,8 +24,7 @@
 <iframe src="https://open.spotify.com/embed?uri=spotify:album:7JV505O1I9Sc3uHtFEFtkf" width="250" height="380" frameborder="0" allowtransparency="true"></iframe>
 </div>
 
-<div class="row">
-  <div class="container-fluid">
+
   <div class="col-md-8 col-md-offset-2" id="col">
     <nav class="navbar navbar-default" id="nav">
       <!-- Brand and toggle get grouped for better mobile display -->
@@ -116,7 +115,7 @@
 <th>Time </th>
 </tr>
 
-<?php foreach($tours as $key => $value) {  $date = new DateTime($value->start->datetime); $date = $date->format('Y-m-d H:i:s');?>
+<?php foreach($tours as $key => $value) {  $date = new DateTime($value->start->datetime); $date = $date->format('Y-m-d H:i');?>
 <tr>
 <td><?= $value->venue->displayName ?></td>
 <td><?= $value->location->city ?></td>
@@ -229,8 +228,6 @@
   </div>
 </div>
 
-</div>
-</div>
 </div>
 
 <div class="col-md-2 col-md-offset-2" id="col-side">
