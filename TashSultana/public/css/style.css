@@ -8,13 +8,12 @@ ul {
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background-color: #333;
+    /*background-color: #333;*/
 }
 
 li {
     float:none;
     display:inline-block;
-    border-right: 1px solid #bbb;
     text-align:center;
     width:13%;
 }
@@ -33,11 +32,33 @@ li a:hover {
 }
 
 .active {
-    background-color: #4CAF50;
+    background-color: #663399;
 }
 
 #nav {
     text-align:center;
+}
+
+.my_nav ul{
+  background: rgba(255, 255, 255, 0);
+  overflow: hidden;
+  padding: 0px;
+  width: 100%;
+}
+
+.my_nav li{
+  background-color: #333;
+  border: 2px solid white;
+  margin-right: 5px;
+  margin-left: 5px;
+  margin-bottom: 18px;
+  text-decoration: none;
+}
+
+.my_nav li:hover, li a:hover {
+  background-color: #FFA500;
+  text-decoration: none;
+  color: white;
 }
 
 #col {
@@ -56,4 +77,10 @@ li a:hover {
   text-align: center;
   width:100%;
   padding: 50px;
+}
+
+.table-striped>tbody>tr:nth-child(odd)>td, .table-striped>tbody>tr:nth-child(odd)>th {color: black;}
+
+th, tr, td {
+  text-align: center;
 }
