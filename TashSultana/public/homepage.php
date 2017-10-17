@@ -2,14 +2,21 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>Tash Sultana</title>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"
+  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-<link rel="stylesheet" type="text/css" href="./css/contact.css">
+<script src="https://www.youtube.com/iframe_api"></script>
+
 <!--<link rel="stylesheet" type="text/css" href="./css/about.css">-->
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
-<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
-<link rel="stylesheet" href="./css/countdown.css">
-<link rel="stylesheet" href="./css/style.css">
+<link rel="stylesheet"  href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+<!-- css import-->
+<link rel="stylesheet" type="text/css"  href="./css/countdown.css">
+<link rel="stylesheet" type="text/css"  href="./css/style.css">
+<link rel="stylesheet" type="text/css" href="./css/contact.css">
+<link rel="stylesheet" type="text/css" href="./css/music.css">
 
 </head>
 
@@ -109,7 +116,9 @@
     </div>
 
     <div id="music" class="tab-pane fade contenu">
-      music
+        <?php
+        include("music.php");
+        ?>
     </div>
 
     <div id="tour" class="tab-pane fade contenu">
@@ -259,64 +268,63 @@
 </div>
 </div>
 
-
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-
-<script type="text/javascript">
-    $(document).ready(function(){
-        $("#myTab a").click(function(e){
-            e.preventDefault();
-            $(this).tab('show');
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $("#myTab a").click(function(e){
+                e.preventDefault();
+                $(this).tab('show');
+            });
         });
-    });
-</script>
+    </script>
 
-<script type="text/javascript">
-    function countdown() {
-      var NextConcertDate = "<?php echo TimeFormat($tours[0]->start->datetime); ?>";
-      //document.write(NextConcertDate);
-      var now = new Date();
-      var eventDate = new Date(NextConcertDate);
+    <script type="text/javascript">
+        function countdown() {
+          var NextConcertDate = "<?php echo TimeFormat($tours[0]->start->datetime); ?>";
+          //document.write(NextConcertDate);
+          var now = new Date();
+          var eventDate = new Date(NextConcertDate);
 
-      var currentTime = now.getTime();
-      var eventTime = eventDate.getTime();
+          var currentTime = now.getTime();
+          var eventTime = eventDate.getTime();
 
-      var finalTime = eventTime - currentTime;
+          var finalTime = eventTime - currentTime;
 
-      var s = Math.floor(finalTime / 1000);
-      var m = Math.floor(s / 60);
-      var h = Math.floor(m / 60);
-      var d = Math.floor(h / 24);
+          var s = Math.floor(finalTime / 1000);
+          var m = Math.floor(s / 60);
+          var h = Math.floor(m / 60);
+          var d = Math.floor(h / 24);
 
-      h %= 24;
-      m %= 60;
-      s %= 60;
+          h %= 24;
+          m %= 60;
+          s %= 60;
 
-      h = (h < 10) ? "0" + h : h;
-      m = (m < 10) ? "0" + m : m;
-      s = (s < 10) ? "0" + s : s;
+          h = (h < 10) ? "0" + h : h;
+          m = (m < 10) ? "0" + m : m;
+          s = (s < 10) ? "0" + s : s;
 
-      document.getElementById("days").textContent = d;
-      document.getElementById("days").innerText = d;
+          document.getElementById("days").textContent = d;
+          document.getElementById("days").innerText = d;
 
-      document.getElementById("hours").textContent = h;
-      document.getElementById("minutes").textContent = m;
-      document.getElementById("seconds").textContent = s;
+          document.getElementById("hours").textContent = h;
+          document.getElementById("minutes").textContent = m;
+          document.getElementById("seconds").textContent = s;
 
-      setTimeout(countdown, 1000);
-    }
+          setTimeout(countdown, 1000);
+        }
 
-    countdown();
-</script>
+        countdown();
+    </script>
 
-<script>var channelID = "UCdXHuzr3AS3iyPxKSBK15oQ";
-  $.getJSON('https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fwww.youtube.com%2Ffeeds%2Fvideos.xml%3Fchannel_id%3D'+channelID, function(data) {
-     var link = data.items[0].link;
-     //alert(link);
-     var id = link.substr(link.indexOf("=")+1);
-      $("#youtube_video").attr("src","https://youtube.com/embed/"+id);
-  });
-</script>
+    <script>var channelID = "UCdXHuzr3AS3iyPxKSBK15oQ";
+      $.getJSON('https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fwww.youtube.com%2Ffeeds%2Fvideos.xml%3Fchannel_id%3D'+channelID, function(data) {
+         var link = data.items[0].link;
+         //alert(link);
+         var id = link.substr(link.indexOf("=")+1);
+          $("#youtube_video").attr("src","https://youtube.com/embed/"+id);
+      });
+    </script>
 
+    <!-- javascript import-->
+    <script src="./js/music.js"></script>
 </body>
 </html>
