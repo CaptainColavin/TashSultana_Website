@@ -2,21 +2,14 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>Tash Sultana</title>
-
-<script src="https://code.jquery.com/jquery-3.2.1.min.js"
-  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
-  crossorigin="anonymous"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-<script src="https://www.youtube.com/iframe_api"></script>
-
+<!--<link rel="stylesheet" type="text/css" href="./css/contact.css">-->
 <!--<link rel="stylesheet" type="text/css" href="./css/about.css">-->
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
-<link rel="stylesheet"  href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
-<!-- css import-->
-<link rel="stylesheet" type="text/css"  href="./css/countdown.css">
-<link rel="stylesheet" type="text/css"  href="./css/style.css">
-<link rel="stylesheet" type="text/css" href="./css/contact.css">
-<link rel="stylesheet" type="text/css" href="./css/music.css">
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="./css/countdown.css">
+<link rel="stylesheet" href="./css/style.css">
 
 </head>
 
@@ -35,13 +28,13 @@
 
 
   <div class="col-md-8 col-md-offset-2" id="col">
-    <nav class="my_nav" id="nav">
+    <nav class="navbar my_nav" id="nav">
       <!-- Brand and toggle get grouped for better mobile display -->
       <?php /*<div class="navbar-header">
         Bonjour
       </div>*/ ?>
     <!-- Brand and toggle get grouped for better mobile display -->
-    <ul class="topmenu" role="tablist">
+    <ul role="tablist" id="navbar">
       <li role="presentation"><a href="#home" class="active" aria-controls="home" role="tab" data-toggle="tab">Home<span class="sr-only">(current)</span></a></li>
       <li class="dropdown"><a class="dropdown-toggle" aria-controls="music" data-toggle="tab" role ="tab" href="#music">Music <span class="caret"></span></a>
         <ul class="dropdown-menu">
@@ -87,13 +80,13 @@
           <p style="background-color: rgba(201, 201, 201, 0.16); margin-right:30%; margin-left:30%;"><?= TimeFormat($tours[0]->start->datetime); ?></p>
         </div>
         <div class="middle">
-          <ul style="background-color: rgba(201, 201, 201, 0.16); margin-right:15%; margin-left:15%;">
+          <ul style="background-color: rgba(201, 201, 201, 0.16); margin-right:auto; margin-left:auto;">
             <li id="days" class="circle">00 Days</li>
             <li id="hours" class="circle">00</li>
             <li id="minutes" class="circle">00</li>
             <li id="seconds" class="circle">00</li>
           </ul>
-          <ul style="background-color: rgba(201, 201, 201, 0.16); margin-right:15%; margin-left:15%;">
+          <ul style="background-color: rgba(201, 201, 201, 0.16); margin-right:auto; margin-left:auto;">
             <li class="countdownValues">Days</li>
             <li class="countdownValues">Hours</li>
             <li class="countdownValues">Minutes</li>
@@ -116,9 +109,7 @@
     </div>
 
     <div id="music" class="tab-pane fade contenu">
-        <?php
-        include("music.php");
-        ?>
+      music
     </div>
 
     <div id="tour" class="tab-pane fade contenu">
@@ -131,7 +122,7 @@
 <th>Place</th>
 <th>City</th>
 <th>Time</th>
-<th>Buy Ticket</th>
+<th>Purchase</th>
 </tr>
 
 <?php foreach($tours as $key => $value) { $date = new DateTime($value->start->datetime); $date = $date->format('Y-m-d H:i');?>
@@ -149,8 +140,10 @@
 
     <div id="about" class="tab-pane fade contenu container">
       <div class="row">
-        <img class="col-lg-5 col-lg-offset-1  img-responsive"  src="About_Tash.png" alt="Tash Sultana">
-        <div class="col-lg-4 col-lg-offset-1">
+        <div class="col-md-4">
+          <img  src="About_Tash.png" alt="Tash Sultana">
+        </div>
+        <div class="col-md-4 col-md-offset-3">
             Tash Sultana is a young, dynamic Melbourne artist creating waves and generating massive street buzz by playing sold out shows all over the World.
                Tash has made a name for herself busking on the streets of Melbourne and having homemade videos go viral getting millions of views online. <br/><br/>
                Since having her hands wrapped around a guitar at the age of three, the self taught artist quickly developed her own unique style that has people
@@ -159,20 +152,19 @@
       </div>
       <hr/>
       <div class="row">
-          <div class="col-lg-4 col-lg-offset-1">
+          <div class="col-md-4 col-md-offset-1">
             The young, one-woman powerhouse has literally sold out every headline show booked across multiple countries and played dozens of high profile festivals including
             Laneway and Splendour In The Grass 2017. Both singles ‘Jungle’ and ‘Notion’ were quick to receive high rotation on Australian broadcaster triple j with ‘Jungle’ been
             added as mega hit of the week on Netherlands 3FM radio and is picking up rotation on stations across North America. <br/><br/>
             Accolades include a #8 ARIA album chart, topping the iTunes chart with her “Notion EP”, ‘Jungle’ coming in at #3 on triple j’s hottest 100, exceeding platinum sales
             for ‘Jungle’, winning a J award in 2016, an APRA Award nomination and tens of millions of streams Worldwide.
           </div>
-            <img class="col-lg-5 col-lg-offset-1 col-xs-offset-1 img-responsive" src="About_Tash2.jpg" alt="Tash Sultana">
-
+          <div class="col-md-4 col-md-offset-2">
+              <img  src="About_Tash2.jpg" alt="Tash Sultana">
+          </div>
       </div>
       <br/><hr><br/>
-      <div class="embed-responsive embed-responsive-16by9">
-        <iframe class="col-md-12"  height="720" src="https://www.youtube.com/embed/RBw08GbrR-g" frameborder="0" allowfullscreen></iframe>
-      </div>
+      <iframe class="col-md-12" width="1220" height="720" src="https://www.youtube.com/embed/RBw08GbrR-g" frameborder="0" allowfullscreen></iframe>
     </div>
 
 <!------------------------------------------------------------------------------>
@@ -287,12 +279,6 @@
 </script>
 
 <script type="text/javascript">
-$(".topmenu li a").click(function() {
-    $(".topmenu li a").removeClass("active");
-    $(this).parent().children().addClass("active");
-  });
-
-
     function countdown() {
       var NextConcertDate = "<?php echo TimeFormat($tours[0]->start->datetime); ?>";
       //document.write(NextConcertDate);
@@ -301,44 +287,43 @@ $(".topmenu li a").click(function() {
           var currentTime = now.getTime();
           var eventTime = eventDate.getTime();
 
-          var finalTime = eventTime - currentTime;
+      var finalTime = eventTime - currentTime;
 
-          var s = Math.floor(finalTime / 1000);
-          var m = Math.floor(s / 60);
-          var h = Math.floor(m / 60);
-          var d = Math.floor(h / 24);
+      var s = Math.floor(finalTime / 1000);
+      var m = Math.floor(s / 60);
+      var h = Math.floor(m / 60);
+      var d = Math.floor(h / 24);
 
-          h %= 24;
-          m %= 60;
-          s %= 60;
+      h %= 24;
+      m %= 60;
+      s %= 60;
 
-          h = (h < 10) ? "0" + h : h;
-          m = (m < 10) ? "0" + m : m;
-          s = (s < 10) ? "0" + s : s;
+      h = (h < 10) ? "0" + h : h;
+      m = (m < 10) ? "0" + m : m;
+      s = (s < 10) ? "0" + s : s;
 
-          document.getElementById("days").textContent = d;
-          document.getElementById("days").innerText = d;
+      document.getElementById("days").textContent = d;
+      document.getElementById("days").innerText = d;
 
-          document.getElementById("hours").textContent = h;
-          document.getElementById("minutes").textContent = m;
-          document.getElementById("seconds").textContent = s;
+      document.getElementById("hours").textContent = h;
+      document.getElementById("minutes").textContent = m;
+      document.getElementById("seconds").textContent = s;
 
-          setTimeout(countdown, 1000);
-        }
+      setTimeout(countdown, 1000);
+    }
 
-        countdown();
-    </script>
+    countdown();
+</script>
 
-    <script>var channelID = "UCdXHuzr3AS3iyPxKSBK15oQ";
-      $.getJSON('https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fwww.youtube.com%2Ffeeds%2Fvideos.xml%3Fchannel_id%3D'+channelID, function(data) {
-         var link = data.items[0].link;
-         //alert(link);
-         var id = link.substr(link.indexOf("=")+1);
-          $("#youtube_video").attr("src","https://youtube.com/embed/"+id);
-      });
-    </script>
+<script>var channelID = "UCdXHuzr3AS3iyPxKSBK15oQ";
+  $.getJSON('https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fwww.youtube.com%2Ffeeds%2Fvideos.xml%3Fchannel_id%3D'+channelID, function(data) {
+     var link = data.items[0].link;
+     //alert(link);
+     var id = link.substr(link.indexOf("=")+1);
+      $("#youtube_video").attr("src","https://youtube.com/embed/"+id);
+  });
+</script>
 
-    <!-- javascript import-->
-    <script src="./js/music.js"></script>
+
 </body>
 </html>

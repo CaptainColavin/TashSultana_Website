@@ -1,6 +1,6 @@
 .circle {
-width:150px;
-height:150px;
+width:18%;
+height:auto;
 border-radius:50%;
 border:4px solid #fff;
 font-size:50px;
@@ -8,15 +8,16 @@ line-height:100px;
 text-align:center;
 text-decoration:none;
 text-shadow:0 1px 0 #fff;
-padding: 20px;
+padding: 3% 5% 3% 5%;
 }
 
 .countdownValues {
-  width:150px;
+  width:18%;
   height:auto;
   border: none;
   font-size:15px;
   text-align:center;
+  margin: auto;
 }
 
 .bgimg {
@@ -29,8 +30,8 @@ padding: 20px;
 }
 
 .top {
-  position: absolute;
-  top: 15%;
+  position: relative;
+  top: 20%;
   left: 50%;
   transform: translate(-50%, -50%);
   width: 100%;
