@@ -28,13 +28,13 @@
 
 
   <div class="col-md-8 col-md-offset-2" id="col">
-    <nav class="my_nav" id="nav">
+    <nav class="navbar my_nav" id="nav">
       <!-- Brand and toggle get grouped for better mobile display -->
       <?php /*<div class="navbar-header">
         Bonjour
       </div>*/ ?>
     <!-- Brand and toggle get grouped for better mobile display -->
-    <ul role="tablist">
+    <ul role="tablist" id="navbar">
       <li role="presentation"><a href="#home" class="active" aria-controls="home" role="tab" data-toggle="tab">Home<span class="sr-only">(current)</span></a></li>
       <li class="dropdown"><a class="dropdown-toggle" aria-controls="music" data-toggle="tab" role ="tab" href="#music">Music <span class="caret"></span></a>
         <ul class="dropdown-menu">
@@ -80,13 +80,13 @@
           <p style="background-color: rgba(201, 201, 201, 0.16); margin-right:30%; margin-left:30%;"><?= TimeFormat($tours[0]->start->datetime); ?></p>
         </div>
         <div class="middle">
-          <ul style="background-color: rgba(201, 201, 201, 0.16); margin-right:15%; margin-left:15%;">
+          <ul style="background-color: rgba(201, 201, 201, 0.16); margin-right:auto; margin-left:auto;">
             <li id="days" class="circle">00 Days</li>
             <li id="hours" class="circle">00</li>
             <li id="minutes" class="circle">00</li>
             <li id="seconds" class="circle">00</li>
           </ul>
-          <ul style="background-color: rgba(201, 201, 201, 0.16); margin-right:15%; margin-left:15%;">
+          <ul style="background-color: rgba(201, 201, 201, 0.16); margin-right:auto; margin-left:auto;">
             <li class="countdownValues">Days</li>
             <li class="countdownValues">Hours</li>
             <li class="countdownValues">Minutes</li>
@@ -122,7 +122,7 @@
 <th>Place</th>
 <th>City</th>
 <th>Time</th>
-<th>Buy Ticket</th>
+<th>Purchase</th>
 </tr>
 
 <?php foreach($tours as $key => $value) { $date = new DateTime($value->start->datetime); $date = $date->format('Y-m-d H:i');?>
@@ -318,6 +318,7 @@
       $("#youtube_video").attr("src","https://youtube.com/embed/"+id);
   });
 </script>
+
 
 </body>
 </html>
