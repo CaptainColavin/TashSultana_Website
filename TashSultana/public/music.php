@@ -70,6 +70,7 @@ li a:hover {
 }
 
 .category-container {
+    margin-bottom: 20px;
     text-align: center;
 }
 
@@ -83,25 +84,35 @@ li a:hover {
     font-weight: bold;
     text-align: center;
     cursor: pointer;
+    -webkit-transition: all 200ms ease-in;
+    -ms-transition: all 200ms ease-in;
+    -moz-transition: all 200ms ease-in;
+    transition: all 200ms ease-in;
 }
 
+.category-main:active {
+    filter: brightness(50%);
+}
 .music {
     padding-top: 50px;
-    background-color: red;
+    background-size: cover;
+    background-image: url('./images/music-music.jpg');
 }
 
 .live {
     padding-top: 50px;
-    background-color: blue;
+    background-size: cover;
+    background-image: url('./images/music-live.jpg');
 }
 
 .live-bed {
     padding-top: 50px;
-    background-color: green;
+    background-size: cover;
+    background-image: url('./images/music-bedroom.jpg');
 }
 
 .player-container {
-    width: 500px;
+    width: 700px;
     margin-right: auto;
     margin-left: auto;
     display: block;
@@ -134,12 +145,59 @@ li a:hover {
     background-position: 20px;
     background-repeat: no-repeat;
 }
-#music {
-
+.music-list div, .live-bed-list div, .live-list div{
+    width: 340px;
+    height: 55px;
+    padding-top: 8px;
+    font-size: 15px;
+    font-weight: 500;
+    border-radius: 500px;
+    margin-bottom: 8px;
+    margin-right: 8px;
+    vertical-align: middle;
+    text-align: center;
+    transition: all 200ms ease-in;
+    background: hsla(0,0%,9%,.7);
+    border: 0;
+    box-shadow: inset 0 0 0 2px #a0a0a0;
+    cursor: pointer;
+    display: inline-block;
+    text-transform: uppercase;
+}
+.music-list div:hover{
+    box-shadow: inset 0 0 0 2px #fff, 0 0 0 1px transparent;
+    transform: scale(1.05);
 }
 
-#player {
+.iframe-container {
+    margin-bottom: 15px;
+}
 
+.active-music {
+    background-color: #1db954 !important;
+    box-shadow: none !important;
+}
+
+.active-txt {
+    display: block !important;
+    pointer-events: none;
+}
+
+.hide-txt {
+    display: none;
+}
+
+.live-list div{
+    display: inline-block;
+}
+.live-bed-list div{
+    display: inline-block;
+}
+#player {
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 10px;
+    display: block;
 }
 
 </style>
@@ -181,7 +239,7 @@ li a:hover {
 
 <div class="center">
   <div class="tab-content">
-    <div id="home" class="tab-pane fade in active contenu">
+    <div id="home" class="tab-pane fade   contenu">
 okokookokokko
 <br/>
 <br/>
@@ -196,7 +254,7 @@ okokookokokko
 <br/>
     </div>
 
-    <div id="music" class="tab-pane fade contenu">
+    <div id="music" class="tab-pane fade in active contenu">
         <!-- MUSIC A RECOPIER DANS UN FICHIER A PART -->
         <div class="category-container" >
             <div class="category-main music">
@@ -209,27 +267,16 @@ okokookokokko
                 Live Bedrooms
             </div>
         </div>
-
+        <div class="iframe-container embed-responsive embed-responsive-16by9">
+            <div id="player"></div>
+        </div>
         <div class="player-container">
-            <div class="owl-carousel">
-                <!-- <div class="music-player">
-                    <iframe width="420" height="315"
-                    src="https://www.youtube.com/embed/XGSy3_Czz8k">
-                    </iframe>
-                </div>
-                <div class="music-player">
-                    <iframe width="420" height="315"
-                    src="https://www.youtube.com/embed/XGSy3_Czz8k">
-                    </iframe>
-                </div>
-                <div class="music-player">
-                    <iframe width="420" height="315"
-                    src="https://www.youtube.com/embed/XGSy3_Czz8k">
-                    </iframe>
-                </div> -->
+            <div class="list-of-music">
+                <div class="music-list"></div>
+                <div class="live-list"></div>
+                <div class="live-bed-list"></div>
+            </div>
 
-
-            </div>`
         </div>
 
 
@@ -272,9 +319,17 @@ Instagram logo<br/>
             $(this).tab('show');
         });
 
-        $( ".owl-next" ).empty();
-        $( ".owl-prev" ).empty();
+        $('.category-main').click(changeTab);
+        $('.list-of-music').children().hide();
+        $('.iframe-container').hide();
+        $('.music-list').show(100);
+
     });
+
+    var activeElem = {
+        id: '',
+        txt: ''
+    }
 
     // 2. This code loads the IFrame Player API code asynchronously.
     var tag = document.createElement('script');
@@ -287,30 +342,75 @@ Instagram logo<br/>
     //    after the API code downloads.
     var player;
 
+    function changeTab(e) {
+        var type = e.target.classList[1];
+        $('.list-of-music').children().hide(100);
+        if(type === 'music') {
+            $('.music-list').show(100);
+        }else if(type === 'live') {
+            $('.live-list').show(100);
+        }else if(type === 'live-bed') {
+            $('.live-bed-list').show(100);
+        }
+    }
+
+    function changeMusic(e) {
+        var videoId = e.target.attributes.id.value;
+
+        if (activeElem.id && activeElem.txt) {
+            $(activeElem.id)
+            .removeClass('active-music')
+            .text(activeElem.txt);
+        }
+        $('.iframe-container').show();
+        activeElem.id = '#' + videoId;
+        activeElem.txt = e.target.textContent;
+
+        $(e.target)
+        .text('PLAYING')
+        .addClass('active-music');
+
+        if(player)
+            player.loadVideoById(videoId)
+
+        else {
+            player = new YT.Player('player', {
+              height: '360',
+              width: '640',
+              videoId: videoId
+            });
+            $('iframe').addClass('embed-responsive-item');
+        }
+    }
+
+    function getRightType(obj) {
+        var title = obj.title.toLowerCase();
+
+        if((title.indexOf('live') >= 0) && (title.indexOf('bedroom') >= 0 )) {
+            obj.title = cutTitle(title);
+            return '.live-bed-list';
+        } else if((title.indexOf('live') >= 0) && (title.indexOf('bedroom') < 0 )) {
+            return '.live-list';
+        } else {
+            obj.title = cutTitle(title);
+            return '.music-list';
+        }
+    }
+
     function initYoutubeVideos(list) {
         for (var i=0; i < list.length; i++) {
-            if (list[i]) {
-                var classCount = 'music' + i;
-                $('.owl-carousel').append(
+            if (list[i] && list[i].id) {
+                var typeOfMusic = getRightType(list[i]);
+                $(typeOfMusic).append(
                   $('<div/>')
-                    .attr("id", classCount)
+                    .attr("id", list[i].id)
+                    .text(list[i].title)
+                    .css('color', 'white')
+                    .on('click',changeMusic)
                 );
 
-                player = new YT.Player('music1', {
-                    width: '500px',
-                    videoId: 'list[i]',
-                    events: {}
-                });
             }
         }
-        $(".owl-carousel").owlCarousel({
-            center: true,
-            items: 1,
-            nav: true,
-            video:true,
-            infinite: true,
-            margin: 30
-        });
 
     }
 
@@ -329,37 +429,29 @@ Instagram logo<br/>
         httpGetAsync();
     }
 
-    // 4. The API will call this function when the video player is ready.
-    function onPlayerReady(event) {
-
-    }
-
-    // 5. The API calls this function when the player's state changes.
-    //    The function indicates that when playing a video (state=1),
-    //    the player should play for six seconds and then stop.
-    var done = false;
-    function onPlayerStateChange(event) {
-      if (event.data == YT.PlayerState.PLAYING && !done) {
-        setTimeout(stopVideo, 6000);
-        done = true;
+    function cutTitle(title) {
+        var tmp = title;
+        var i = tmp.indexOf('-');
+        if(i >= 0){
+            tmp = tmp.substr(i + 1);
         }
-    }
-    function stopVideo() {
-      player.stopVideo();
+        console.log(tmp);
+        return tmp;
     }
 
     function extractVideosUrl (json) {
         var obj = JSON.parse(json);
-        console.log(obj);
         var listOfVideo = [];
         for (var item of obj.items) {
-            listOfVideo.push(item.id.videoId);
+            var infos = {
+                id: item.id.videoId,
+                title: item.snippet.title
+            }
+            listOfVideo.push(infos);
         }
         initYoutubeVideos(listOfVideo);
 
     }
-
-
 
     </script>
 </body>
