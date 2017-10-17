@@ -38,7 +38,7 @@
 
 
         <div class="col-md-8 col-md-offset-2" id="col">
-            <nav class="navbar my_nav" id="nav">
+        <nav class="navbar my_nav" id="nav">
               <!-- Brand and toggle get grouped for better mobile display -->
               <?php /*<div class="navbar-header">
                 Bonjour
@@ -46,12 +46,7 @@
             <!-- Brand and toggle get grouped for better mobile display -->
             <ul role="tablist" id="navbar">
               <li role="presentation"><a href="#home" class="active" aria-controls="home" role="tab" data-toggle="tab">Home<span class="sr-only">(current)</span></a></li>
-              <li class="dropdown"><a class="dropdown-toggle" aria-controls="music" data-toggle="tab" role ="tab" href="#music">Music <span class="caret"></span></a>
-                <ul class="dropdown-menu">
-                  <li><a href="#section41">Section 4-1</a></li>
-                  <li><a href="#section42">Section 4-2</a></li>
-                </ul>
-              </li>
+              <li><a aria-controls="music" data-toggle="tab" role ="tab" href="#music">Music </a></li>
               <li role="presentation"><a href="#tour" aria-controls="tour" role="tab" data-toggle="tab">Tour</a></li>
               <li role="presentation"><a href="https://24hundred.net/collections/tash-sultana?Tash+Sultana+Store" target="_blank">Store</a></li>
               <li role="presentation"><a href="#contact" aria-controls="contact" role="tab" data-toggle="tab">Contact</a></li>
@@ -272,21 +267,21 @@
         </div>
         </div>
 
-            <script type="text/javascript">
-                $(document).ready(function(){
-                    $("#myTab a").click(function(e){
-                        e.preventDefault();
-                        $(this).tab('show');
-                    });
+        <script type="text/javascript">
+            $(document).ready(function(){
+                $("#myTab a").click(function(e){
+                    e.preventDefault();
+                    $(this).tab('show');
                 });
-            </script>
+            });
+        </script>
 
-            <script type="text/javascript">
-                function countdown() {
-                  var NextConcertDate = "<?php echo TimeFormat($tours[0]->start->datetime); ?>";
-                  //document.write(NextConcertDate);
-                  var now = new Date();
-                  var eventDate = new Date(NextConcertDate);
+        <script type="text/javascript">
+            function countdown() {
+              var NextConcertDate = "<?php echo TimeFormat($tours[0]->start->datetime); ?>";
+              //document.write(NextConcertDate);
+              var now = new Date();
+              var eventDate = new Date(NextConcertDate);
             });
         </script>
 
