@@ -20,7 +20,6 @@
             <div class="live-list"></div>
             <div class="live-bed-list"></div>
         </div>
-
     </div>
     <!-- MUSIC A RECOPIER DANS UN FICHIER A PART -->
 </div>
