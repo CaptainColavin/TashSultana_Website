@@ -41,7 +41,7 @@
         Bonjour
       </div>*/ ?>
     <!-- Brand and toggle get grouped for better mobile display -->
-    <ul role="tablist">
+    <ul class="topmenu" role="tablist">
       <li role="presentation"><a href="#home" class="active" aria-controls="home" role="tab" data-toggle="tab">Home<span class="sr-only">(current)</span></a></li>
       <li class="dropdown"><a class="dropdown-toggle" aria-controls="music" data-toggle="tab" role ="tab" href="#music">Music <span class="caret"></span></a>
         <ul class="dropdown-menu">
@@ -275,6 +275,7 @@
                 $(this).tab('show');
             });
         });
+<<<<<<< HEAD
     </script>
 
     <script type="text/javascript">
@@ -283,6 +284,24 @@
           //document.write(NextConcertDate);
           var now = new Date();
           var eventDate = new Date(NextConcertDate);
+=======
+
+    });
+</script>
+
+<script type="text/javascript">
+$(".topmenu li a").click(function() {
+    $(".topmenu li a").removeClass("active");
+    $(this).parent().children().addClass("active");
+  });
+
+
+    function countdown() {
+      var NextConcertDate = "<?php echo TimeFormat($tours[0]->start->datetime); ?>";
+      //document.write(NextConcertDate);
+      var now = new Date();
+      var eventDate = new Date(NextConcertDate);
+>>>>>>> 72daedc1e9f1a0148c5ab868b9bb1465641b9830
 
           var currentTime = now.getTime();
           var eventTime = eventDate.getTime();
