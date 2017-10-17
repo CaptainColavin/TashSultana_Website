@@ -187,19 +187,19 @@
                           <div>
                             <h4>Lemon Tree Music (ww) </h4>
                             <h4>REGAN LETHBRIDGE & DAVID MORGAN</h4>
-                            <h5>info@lemontreemusic.com.au</h5>
+                            <a href="mailto:info@lemontreemusic.com.au">info@lemontreemusic.com.au</a>
                           </div>
                           <hr style="border-top: dotted 1px;" />
                           <div>
                             <h4>LTM / UNIFIED (USA co mgmt)</h4>
                             <h4>JADDAN COMERFORD</h4>
-                            <h5>www.weareunified.com​</h5>
+                            <a href="http://www.unifiedmusicgroup.com/">www.weareunified.com​</a>
                           </div>
                           <hr style="border-top: dotted 1px;" />
                           <div>
                             <h4>LTM / PLUG N PLAY (UK / EU co mgmt)</h4>
                             <h4>DAVE TOETHUIS</h4>
-                            <h5>dave.plugandplay@gmail.com</h5>
+                            <a href="mailto:dave.plugandplay@gmail.com">dave.plugandplay@gmail.com</a>
                           </div>
 
                         </div>
@@ -211,25 +211,25 @@
                           <div>
                             <h4>FREE TRADE AGENCY (UK / EU) </h4>
                             <h4>PAUL BOSWELL</h4>
-                            <h5>paulb@freetradeagency.co.uk</h5>
+                            <a href="mailto:paulb@freetradeagency.co.uk">paulb@freetradeagency.co.uk</a>
                           </div>
                           <hr style="border-top: dotted 1px;" />
                           <div>
                             <h4>123 AGENCY (AUS / NZ / ROW)</h4>
                             <h4>REGAN LETHBRIDGE</h4>
-                            <h5>regan@123agency.com.au</h5>
+                            <a href="mailto:regan@123agency.com.au">regan@123agency.com.au</a>
                           </div>
                           <hr style="border-top: dotted 1px;" />
                           <div>
                             <h4>PARADIGM AGENCY (AMERICAS)</h4>
                             <h4>TOM WINDISH - JACKIE NALPANT - AARON PINKUS</h4>
-                            <h5>tashsultanateam@paradigmagency.com</h5>
+                            <a href="mailto:tashsultanateam@paradigmagency.com">tashsultanateam@paradigmagency.com</a>
                           </div>
                           <hr style="border-top: dotted 1px;" />
                           <div>
                             <h4>PARADIGM AGENCY (CANADA)</h4>
                             <h4>ROB ZIFARELLI</h4>
-                            <h5>rzifarelli@paradigmagency.com</h5>
+                            <a href="mailto:rzifarelli@paradigmagency.com">rzifarelli@paradigmagency.com</a>
                           </div>
 
                         </div>
