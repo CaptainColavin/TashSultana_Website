@@ -34,6 +34,7 @@
   <div class="collapse navbar-collapse" style="padding-right:0px; padding-left:0px">
     <!-- Brand and toggle get grouped for better mobile display -->
     <ul role="tablist">
+      <li><a href="/register">Register</a></li>
       <li role="presentation"><a href="#home" class="active" aria-controls="home" role="tab" data-toggle="tab">Home<span class="sr-only">(current)</span></a></li>
       <li class="dropdown"><a class="dropdown-toggle" aria-controls="music" data-toggle="tab" role ="tab" href="#music">Music <span class="caret"></span></a>
         <ul class="dropdown-menu">
@@ -61,6 +62,7 @@
   }
 
   function TimeFormat($date) {
+    date_default_timezone_set("Europe/Paris");
     $time = DateTime::createFromFormat('Y-m-d\TH:i:sP', $date);
     $raw = $time->format(DateTime::RFC850);
 
