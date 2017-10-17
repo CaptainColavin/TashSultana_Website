@@ -14,7 +14,7 @@
         <!-- import de CSS -->
         <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
-        <!--<link rel="stylesheet" type="text/css" href="./css/contact.css">-->
+        <link rel="stylesheet" type="text/css" href="./css/contact.css">
         <!--<link rel="stylesheet" type="text/css" href="./css/about.css">-->
         <link rel="stylesheet" type="text/css" href="./css/countdown.css">
         <link rel="stylesheet" type="text/css" href="./css/style.css">
@@ -147,10 +147,8 @@
 
             <div id="about" class="tab-pane fade contenu container">
               <div class="row">
-                <div class="col-md-4">
-                  <img  src="About_Tash.png" alt="Tash Sultana">
-                </div>
-                <div class="col-md-4 col-md-offset-3">
+                <img class="col-lg-5 col-lg-offset-1  img-responsive"  src="About_Tash.png" alt="Tash Sultana">
+                <div class="col-lg-4 col-lg-offset-1">
                     Tash Sultana is a young, dynamic Melbourne artist creating waves and generating massive street buzz by playing sold out shows all over the World.
                        Tash has made a name for herself busking on the streets of Melbourne and having homemade videos go viral getting millions of views online. <br/><br/>
                        Since having her hands wrapped around a guitar at the age of three, the self taught artist quickly developed her own unique style that has people
@@ -159,19 +157,20 @@
               </div>
               <hr/>
               <div class="row">
-                  <div class="col-md-4 col-md-offset-1">
+                  <div class="col-lg-4 col-lg-offset-1">
                     The young, one-woman powerhouse has literally sold out every headline show booked across multiple countries and played dozens of high profile festivals including
                     Laneway and Splendour In The Grass 2017. Both singles ‘Jungle’ and ‘Notion’ were quick to receive high rotation on Australian broadcaster triple j with ‘Jungle’ been
                     added as mega hit of the week on Netherlands 3FM radio and is picking up rotation on stations across North America. <br/><br/>
                     Accolades include a #8 ARIA album chart, topping the iTunes chart with her “Notion EP”, ‘Jungle’ coming in at #3 on triple j’s hottest 100, exceeding platinum sales
                     for ‘Jungle’, winning a J award in 2016, an APRA Award nomination and tens of millions of streams Worldwide.
                   </div>
-                  <div class="col-md-4 col-md-offset-2">
-                      <img  src="About_Tash2.jpg" alt="Tash Sultana">
-                  </div>
+                  <img class="col-lg-5 col-lg-offset-1 col-xs-offset-1 img-responsive" src="About_Tash2.jpg" alt="Tash Sultana">
+
               </div>
               <br/><hr><br/>
-              <iframe class="col-md-12" width="1220" height="720" src="https://www.youtube.com/embed/RBw08GbrR-g" frameborder="0" allowfullscreen></iframe>
+              <div class="embed-responsive embed-responsive-16by9">
+                <iframe class="col-md-12"  height="720" src="https://www.youtube.com/embed/RBw08GbrR-g" frameborder="0" allowfullscreen></iframe>
+              </div>
             </div>
 
         <!------------------------------------------------------------------------------>
