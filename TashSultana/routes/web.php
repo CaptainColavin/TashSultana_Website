@@ -19,3 +19,15 @@ Route::get('/', function () {
 /*Route::get('/test', function () {
   return redirect('/test.php');
 });*/
+
+Route::get('/tour', function () {
+    //return view('welcome');
+    return redirect('/songkick.php');
+});
+Auth::routes();
+// Permet de se logout via /logout (Pour test)
+Route::get('logout', 'Auth\LoginController@logout');
+
+Route::get('/home', 'HomeController@index')->name('home');
+
+Route::resource('goldenbook', 'goldenbookController');

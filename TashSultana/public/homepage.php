@@ -66,6 +66,7 @@
           }
 
           function TimeFormat($date) {
+            date_default_timezone_set("Europe/Paris");
             $time = DateTime::createFromFormat('Y-m-d\TH:i:sP', $date);
             $raw = $time->format(DateTime::RFC850);
 
@@ -270,16 +271,16 @@
                     e.preventDefault();
                     $(this).tab('show');
                 });
-            });
-        </script>
 
-        <script type="text/javascript">
-            function countdown() {
-              var NextConcertDate = "<?php echo TimeFormat($tours[0]->start->datetime); ?>";
-              //document.write(NextConcertDate);
-              var now = new Date();
-              var eventDate = new Date(NextConcertDate);
-            });
+            </script>
+
+            <script type="text/javascript">
+                function countdown() {
+                  var NextConcertDate = "<?php echo TimeFormat($tours[0]->start->datetime); ?>";
+                  //document.write(NextConcertDate);
+                  var now = new Date();
+                  var eventDate = new Date(NextConcertDate);
+            };
         </script>
 
         <script type="text/javascript">
