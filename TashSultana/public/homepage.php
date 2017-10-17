@@ -275,7 +275,6 @@
                 $(this).tab('show');
             });
         });
-<<<<<<< HEAD
     </script>
 
     <script type="text/javascript">
@@ -284,8 +283,6 @@
           //document.write(NextConcertDate);
           var now = new Date();
           var eventDate = new Date(NextConcertDate);
-=======
-
     });
 </script>
 
@@ -301,8 +298,6 @@ $(".topmenu li a").click(function() {
       //document.write(NextConcertDate);
       var now = new Date();
       var eventDate = new Date(NextConcertDate);
->>>>>>> 72daedc1e9f1a0148c5ab868b9bb1465641b9830
-
           var currentTime = now.getTime();
           var eventTime = eventDate.getTime();
 
