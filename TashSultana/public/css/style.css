@@ -39,6 +39,10 @@ li a:hover {
     text-align:center;
 }
 
+.my_nav {
+  margin-bottom: 0;
+}
+
 .my_nav ul{
   background: rgba(255, 255, 255, 0);
   overflow: hidden;
@@ -69,7 +73,7 @@ li a:hover {
 #col-side {
   margin-left: 0px;
   margin-right: 0px;
-  margin-top: 70px;
+  margin-top: 72px;
 }
 
 .contenu {
