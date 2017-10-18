@@ -51,7 +51,7 @@
                           <li role="presentation"><a href="https://24hundred.net/collections/tash-sultana?Tash+Sultana+Store" target="_blank">Store</a></li>
                           <li role="presentation"><a href="/contact">Contact</a></li>
                           <li role="presentation"><a href="/about">About</a></li>
-                          <li role="presentation"><a href="#livre">Golden Book</a></li>
+                          <li role="presentation"><a href="/goldenbook">Golden Book</a></li>
                         </ul>
                     </nav>
 
