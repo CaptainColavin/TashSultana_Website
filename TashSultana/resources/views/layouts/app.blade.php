@@ -83,7 +83,7 @@
 
             </div>
         </div>
-
+        <script src="./js/countdown.js"></script>
         <script src="./js/music.js"></script>
 
     </body>
