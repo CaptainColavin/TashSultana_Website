@@ -31,3 +31,5 @@ Route::get('logout', 'Auth\LoginController@logout');
 Route::get('/home', 'HomeController@index')->name('home');
 
 Route::resource('goldenbook', 'goldenbookController');
+
+Route::get('/music', 'musicController@index');
