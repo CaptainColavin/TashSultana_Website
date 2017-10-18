@@ -16,7 +16,7 @@ class CreateGoldenbookTable extends Migration
         Schema::create('goldenbook', function (Blueprint $table) {
             $table->increments('id');
             $table->DateTime('date');
-            $table->string('text');
+            $table->longtext('text');
             $table->rememberToken();
             $table->timestamps();
         });
