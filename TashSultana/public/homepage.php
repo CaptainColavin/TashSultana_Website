@@ -270,16 +270,16 @@
                 $("#myTab a").click(function(e){
                     e.preventDefault();
                     $(this).tab('show');
-                });
+                })
+            });
+        </script>
 
-            </script>
-
-            <script type="text/javascript">
-                function countdown() {
-                  var NextConcertDate = "<?php echo TimeFormat($tours[0]->start->datetime); ?>";
-                  //document.write(NextConcertDate);
-                  var now = new Date();
-                  var eventDate = new Date(NextConcertDate);
+        <script type="text/javascript">
+            function countdown() {
+              var NextConcertDate = "<?php echo TimeFormat($tours[0]->start->datetime); ?>";
+              //document.write(NextConcertDate);
+              var now = new Date();
+              var eventDate = new Date(NextConcertDate);
             };
         </script>
 
