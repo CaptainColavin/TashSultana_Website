@@ -15,7 +15,7 @@
         <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
         <link rel="stylesheet" type="text/css" href="./css/contact.css">
-        <!--<link rel="stylesheet" type="text/css" href="./css/about.css">-->
+        <link rel="stylesheet" type="text/css" href="./css/about.css">
         <link rel="stylesheet" type="text/css" href="./css/countdown.css">
         <link rel="stylesheet" type="text/css" href="./css/style.css">
         <link rel="stylesheet" type="text/css" href="./css/music.css">
@@ -51,7 +51,7 @@
                           <li role="presentation"><a href="https://24hundred.net/collections/tash-sultana?Tash+Sultana+Store" target="_blank">Store</a></li>
                           <li role="presentation"><a href="/contact">Contact</a></li>
                           <li role="presentation"><a href="/about">About</a></li>
-                          <li role="presentation"><a href="#livre">Livre d'or</a></li>
+                          <li role="presentation"><a href="#livre">Golden Book</a></li>
                         </ul>
                     </nav>
 
