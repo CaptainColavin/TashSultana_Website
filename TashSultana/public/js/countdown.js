@@ -3,9 +3,8 @@ function countdown() {
   //document.write(NextConcertDate);
   var now = new Date();
   var eventDate = new Date(NextConcertDate);
-
-  var currentTime = now.getTime();
-  var eventTime = eventDate.getTime();
+      var currentTime = now.getTime();
+      var eventTime = eventDate.getTime();
 
   var finalTime = eventTime - currentTime;
 
@@ -31,3 +30,5 @@ function countdown() {
 
   setTimeout(countdown, 1000);
 }
+
+countdown();

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use DateTime;
 
 class HomeController extends Controller
 {
@@ -13,8 +14,17 @@ class HomeController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function index()
-    {
-        return view('home');
+    {   
+      $json = file_get_contents('http://api.songkick.com/api/3.0/artists/5112228/calendar.json?apikey=5OnUMhFOovUJseOG');
+
+      $array = json_decode($json);
+
+      $tours=array();
+      foreach ($array->resultsPage->results->event as $key => $value) {
+          $tours[$key]=$value;
+      }
+
+        return view("home")->with(array('tours'=>$tours));
     }
 
     /*return the MUSIC template*/
