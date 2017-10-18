@@ -1,10 +1,19 @@
 @media (max-width: 991px) {
 
-.subtitle h2{
-	margin-top: 50px;
-	padding-top: 8px;
-	margin-bottom: -25px;
+.subtitle {
 	border-top: dashed 5px grey;
 }
 
+.subtitle h2 {
+	margin-bottom: 30px;
+}
+
+}
+
+.orange {
+	color: #FFA500;
+}
+
+.contact-title {
+	margin-bottom: 20px;
 }

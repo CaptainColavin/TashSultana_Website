@@ -124,13 +124,15 @@
                 <h1>Tours</h1>
                 <div class="table-responsive">
                     <table class="table table-striped table-data">
+                      <thead style="background-color: #DCDCDC; color: black;">
                         <tr>
                             <th>Place</th>
                             <th>City</th>
                             <th>Time</th>
                             <th>Purchase</th>
                         </tr>
-
+                      </thead>
+                      <tbody>
                         <?php foreach($tours as $key => $value) { $date = new DateTime($value->start->datetime); $date = $date->format('Y-m-d H:i');?>
                         <tr>
                         <td><?= $value->venue->displayName ?></td>
@@ -139,7 +141,7 @@
                         <td><a href="<?= $value->uri ?>" target="_blank">Buy Ticket</a></td>
                         </tr>
                         <?php } ?>
-
+                      </tbody>
                     </table>
                 </div>
             </div>
@@ -147,21 +149,21 @@
             <div id="about" class="tab-pane fade contenu container">
               <div class="row">
                 <img class="col-lg-5 col-lg-offset-1  img-responsive"  src="About_Tash.png" alt="Tash Sultana">
-                <div class="col-lg-4 col-lg-offset-1">
-                    Tash Sultana is a young, dynamic Melbourne artist creating waves and generating massive street buzz by playing sold out shows all over the World.
+                <div class="col-lg-4 col-lg-offset-1" style="text-align: left !important;">
+                    <p>Tash Sultana is a young, dynamic Melbourne artist creating waves and generating massive street buzz by playing sold out shows all over the World.
                        Tash has made a name for herself busking on the streets of Melbourne and having homemade videos go viral getting millions of views online. <br/><br/>
                        Since having her hands wrapped around a guitar at the age of three, the self taught artist quickly developed her own unique style that has people
-                        lining up to see her perform. Her vocal shines with a magical quality, she has a natural gift for melody and her virtuosic guitar playing is from another planet.
+                        lining up to see her perform. Her vocal shines with a magical quality, she has a natural gift for melody and her virtuosic guitar playing is from another planet.</p>
                 </div>
               </div>
               <hr/>
               <div class="row">
-                  <div class="col-lg-4 col-lg-offset-1">
-                    The young, one-woman powerhouse has literally sold out every headline show booked across multiple countries and played dozens of high profile festivals including
+                  <div class="col-lg-4 col-lg-offset-1" style="text-align: left !important;">
+                    <p>The young, one-woman powerhouse has literally sold out every headline show booked across multiple countries and played dozens of high profile festivals including
                     Laneway and Splendour In The Grass 2017. Both singles ‘Jungle’ and ‘Notion’ were quick to receive high rotation on Australian broadcaster triple j with ‘Jungle’ been
                     added as mega hit of the week on Netherlands 3FM radio and is picking up rotation on stations across North America. <br/><br/>
                     Accolades include a #8 ARIA album chart, topping the iTunes chart with her “Notion EP”, ‘Jungle’ coming in at #3 on triple j’s hottest 100, exceeding platinum sales
-                    for ‘Jungle’, winning a J award in 2016, an APRA Award nomination and tens of millions of streams Worldwide.
+                    for ‘Jungle’, winning a J award in 2016, an APRA Award nomination and tens of millions of streams Worldwide.</p>
                   </div>
                   <img class="col-lg-5 col-lg-offset-1 col-xs-offset-1 img-responsive" src="About_Tash2.jpg" alt="Tash Sultana">
 
@@ -176,26 +178,26 @@
             <div id="contact" class="tab-pane fade contenu">
               <div class="row">
                 <div class="col-md-12">
-                  <h1 class="title text-center">Contact</h1>
+                  <h1 class="title text-center contact-title">Contact</h1>
                     <div class="row">
-                      <div class="col-md-6">
-                        <div class="subtitle management">
-                          <h2 >Management</h2> <br/><br/>
+                      <div class="col-md-6 contact-title">
+                        <div class="subtitle">
+                          <h2>Management</h2>
 
                           <div>
-                            <h4>Lemon Tree Music (ww) </h4>
+                            <h4 class="orange">LEMON TREE MUSIC (ww) </h4>
                             <h4>REGAN LETHBRIDGE & DAVID MORGAN</h4>
                             <a href="mailto:info@lemontreemusic.com.au">info@lemontreemusic.com.au</a>
                           </div>
                           <hr style="border-top: dotted 1px;" />
                           <div>
-                            <h4>LTM / UNIFIED (USA co mgmt)</h4>
+                            <h4 class="orange">LTM / UNIFIED (USA co mgmt)</h4>
                             <h4>JADDAN COMERFORD</h4>
                             <a href="http://www.unifiedmusicgroup.com/">www.weareunified.com​</a>
                           </div>
                           <hr style="border-top: dotted 1px;" />
                           <div>
-                            <h4>LTM / PLUG N PLAY (UK / EU co mgmt)</h4>
+                            <h4 class="orange">LTM / PLUG N PLAY (UK / EU co mgmt)</h4>
                             <h4>DAVE TOETHUIS</h4>
                             <a href="mailto:dave.plugandplay@gmail.com">dave.plugandplay@gmail.com</a>
                           </div>
@@ -203,29 +205,29 @@
                         </div>
                       </div>
                       <div class="col-md-6">
-                        <div class="subtitle booking">
-                          <h2>Booking</h2> <br/><br/>
+                        <div class="subtitle">
+                          <h2>Booking</h2>
 
                           <div>
-                            <h4>FREE TRADE AGENCY (UK / EU) </h4>
+                            <h4 class="orange">FREE TRADE AGENCY (UK / EU) </h4>
                             <h4>PAUL BOSWELL</h4>
                             <a href="mailto:paulb@freetradeagency.co.uk">paulb@freetradeagency.co.uk</a>
                           </div>
                           <hr style="border-top: dotted 1px;" />
                           <div>
-                            <h4>123 AGENCY (AUS / NZ / ROW)</h4>
+                            <h4 class="orange">123 AGENCY (AUS / NZ / ROW)</h4>
                             <h4>REGAN LETHBRIDGE</h4>
                             <a href="mailto:regan@123agency.com.au">regan@123agency.com.au</a>
                           </div>
                           <hr style="border-top: dotted 1px;" />
                           <div>
-                            <h4>PARADIGM AGENCY (AMERICAS)</h4>
+                            <h4 class="orange">PARADIGM AGENCY (AMERICAS)</h4>
                             <h4>TOM WINDISH - JACKIE NALPANT - AARON PINKUS</h4>
                             <a href="mailto:tashsultanateam@paradigmagency.com">tashsultanateam@paradigmagency.com</a>
                           </div>
                           <hr style="border-top: dotted 1px;" />
                           <div>
-                            <h4>PARADIGM AGENCY (CANADA)</h4>
+                            <h4 class="orange">PARADIGM AGENCY (CANADA)</h4>
                             <h4>ROB ZIFARELLI</h4>
                             <a href="mailto:rzifarelli@paradigmagency.com">rzifarelli@paradigmagency.com</a>
                           </div>
@@ -271,6 +273,7 @@
                     e.preventDefault();
                     $(this).tab('show');
                 });
+              });
 
             </script>
 
