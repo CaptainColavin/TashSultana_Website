@@ -20,10 +20,6 @@ Route::get('/', function () {
   return redirect('/test.php');
 });*/
 
-Route::get('/tour', function () {
-    //return view('welcome');
-    return redirect('/songkick.php');
-});
 Auth::routes();
 // Permet de se logout via /logout (Pour test)
 Route::get('logout', 'Auth\LoginController@logout');
@@ -35,3 +31,4 @@ Route::resource('goldenbook', 'goldenbookController');
 Route::get('/music', 'homeController@music');
 Route::get('/contact', 'homeController@contact');
 Route::get('/about', 'homeController@about');
+Route::get('/tour', 'homeController@tour');
