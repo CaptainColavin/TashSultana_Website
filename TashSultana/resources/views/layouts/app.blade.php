@@ -47,18 +47,18 @@
                         <ul role="tablist" id="navbar">
                           <li role="presentation"><a href="/home" class="active" >Home<span class="sr-only">(current)</span></a></li>
                           <li><a href='/music'>Music</a></li>
-                          <li role="presentation"><a href="#tour" aria-controls="tour" role="tab" data-toggle="tab">Tour</a></li>
+                          <li role="presentation"><a href="/tour">Tour</a></li>
                           <li role="presentation"><a href="https://24hundred.net/collections/tash-sultana?Tash+Sultana+Store" target="_blank">Store</a></li>
-                          <li role="presentation"><a href="#contact" aria-controls="contact" role="tab" data-toggle="tab">Contact</a></li>
-                          <li role="presentation"><a href="#about" aria-controls="about" role="tab" data-toggle="tab">About</a></li>
-                          <li role="presentation"><a href="#livre" aria-controls="livre" role="tab" data-toggle="tab">Livre d'or</a></li>
+                          <li role="presentation"><a href="/contact">Contact</a></li>
+                          <li role="presentation"><a href="/about">About</a></li>
+                          <li role="presentation"><a href="#livre">Livre d'or</a></li>
                         </ul>
                     </nav>
 
                     <div class="center">
                       <div class="tab-content">
-                        <section>
-                            @yield('music')
+                        <section class="contenu container">
+                            @yield('content')
                         </section>
 
                       </div>

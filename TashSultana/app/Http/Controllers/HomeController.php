@@ -6,15 +6,6 @@ use Illuminate\Http\Request;
 
 class HomeController extends Controller
 {
-    /**
-     * Create a new controller instance.
-     *
-     * @return void
-     */
-    public function __construct()
-    {
-        $this->middleware('auth');
-    }
 
     /**
      * Show the application dashboard.
@@ -24,5 +15,23 @@ class HomeController extends Controller
     public function index()
     {
         return view('home');
+    }
+
+    /*return the MUSIC template*/
+    public function music()
+    {
+        return view('layouts.music');
+    }
+
+    /*return the ABOUT template*/
+    public function contact()
+    {
+        return view('layouts.contact');
+    }
+
+    /*return the ABOUT template*/
+    public function about()
+    {
+        return view('layouts.about');
     }
 }

@@ -32,4 +32,6 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 Route::resource('goldenbook', 'goldenbookController');
 
-Route::get('/music', 'musicController@index');
+Route::get('/music', 'homeController@music');
+Route::get('/contact', 'homeController@contact');
+Route::get('/about', 'homeController@about');

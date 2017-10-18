@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('music')
+@section('content')
 <div id="music" class="tab-pane fade in">
     <!-- MUSIC A RECOPIER DANS UN FICHIER A PART -->
     <div class="category-container" >

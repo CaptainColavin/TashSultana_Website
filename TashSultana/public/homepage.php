@@ -272,16 +272,10 @@
                 $("#myTab a").click(function(e){
                     e.preventDefault();
                     $(this).tab('show');
-<<<<<<< HEAD
-                })
-            });
-        </script>
-=======
                 });
               });
 
             </script>
->>>>>>> 89d8707f172f273f64cc048ad4c16bc3788c4cee
 
         <script type="text/javascript">
             function countdown() {
