@@ -8,23 +8,47 @@ use DateTime;
 class HomeController extends Controller
 {
 
+    public $tours;
+
+    private static function TimeFormat($date) 
+    {
+    date_default_timezone_set("Europe/Paris");
+    $time = DateTime::createFromFormat('Y-m-d\TH:i:sP', $date);
+    $raw = $time->format(DateTime::RFC850);
+
+    return $raw;
+    }   
+
+    private function getTourFromApi() {
+        $json = file_get_contents('http://api.songkick.com/api/3.0/artists/5112228/calendar.json?apikey=5OnUMhFOovUJseOG');
+
+        $array = json_decode($json);
+
+        $tmp=array();
+        foreach ($array->resultsPage->results->event as $key => $value) {
+            $tmp[$key]=$value;
+        }
+        
+        $this->tours = $tmp;
+    }
+
     /**
      * Show the application dashboard.
      *
      * @return \Illuminate\Http\Response
      */
     public function index()
-    {   
-      $json = file_get_contents('http://api.songkick.com/api/3.0/artists/5112228/calendar.json?apikey=5OnUMhFOovUJseOG');
+    {
+        $this->getTourFromApi();
+        $nextTour = $this->TimeFormat($this->tours[0]->start->datetime);
 
-      $array = json_decode($json);
+        return view("home")->with(array('tours'=>$this->tours, 'nextTour'=>$nextTour));
+    }
 
-      $tours=array();
-      foreach ($array->resultsPage->results->event as $key => $value) {
-          $tours[$key]=$value;
-      }
+    public function tour() {
+         $this->getTourFromApi();
 
-        return view("home")->with(array('tours'=>$tours));
+         return view("layouts.tour")->with(array('tours'=>$this->tours));
     }
 
     /*return the MUSIC template*/

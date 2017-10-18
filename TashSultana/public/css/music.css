@@ -64,7 +64,7 @@
 .music-list div, .live-bed-list div, .live-list div{
     width: 340px;
     height: 55px;
-    padding-top: 2.5%;
+    /*padding-top: 2.5%;*/
     padding-left: 10;
     padding-right: 10;
     font-size: 14px;
@@ -81,6 +81,18 @@
     cursor: pointer;
     display: inline-block;
     text-transform: uppercase;
+}
+
+.music-list div {
+  padding-top: 2.5%;
+}
+
+.live-list div{
+  padding-top: 1%;
+}
+
+.live-bed-list div{
+  padding-top: 2.5%;
 }
 
 .music-list div:hover, .live-bed-list div:hover, .live-list div:hover{

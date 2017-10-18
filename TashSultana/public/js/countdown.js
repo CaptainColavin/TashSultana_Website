@@ -1,5 +1,5 @@
 function countdown() {
-  var NextConcertDate = "<?php echo TimeFormat($tours[0]->start->datetime); ?>";
+  
   //document.write(NextConcertDate);
   var now = new Date();
   var eventDate = new Date(NextConcertDate);

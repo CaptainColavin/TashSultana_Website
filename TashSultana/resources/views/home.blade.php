@@ -7,7 +7,8 @@
             <h1 style="background-color: rgba(201, 201, 201, 0.16); margin-right:30%; margin-left:30%;">Next Concert</h1>
             <p style="background-color: rgba(201, 201, 201, 0.16); margin-top: 20px; margin-right:40%; margin-left:40%;"> {{ $tours[0]->venue->displayName }}</p>
             <p style="background-color: rgba(201, 201, 201, 0.16); margin-right:35%; margin-left:35%;">{{ $tours[0]->location->city }}</p>
-            <p style="background-color: rgba(201, 201, 201, 0.16); margin-right:30%; margin-left:30%;">{{ TimeFormat($tours[0]->start->datetime) }}</p>
+            <p style="background-color: rgba(201, 201, 201, 0.16); margin-right:30%; margin-left:30%;">
+                {{ $nextTour }}</p>
         </div>
         <div class="middle">
           <ul style="background-color: rgba(201, 201, 201, 0.16); margin-right:auto; margin-left:auto;">
@@ -35,4 +36,7 @@
     <iframe class="embed-responsive-item" width="1100" height="620" src="https://www.youtube.com/embed/NAlt1aWdfe4" frameborder="0" allowfullscreen></iframe>
   </div>
 </div>
+<script>
+    var NextConcertDate =' {{ $nextTour }} ';
+</script>
 @stop

@@ -16,3 +16,20 @@ margin-top: 5%;
   margin-right: 9.5%;
   text-align: right;
 }
+
+.first-image {
+  margin-left:auto;
+  margin-right:auto;
+  margin-bottom: 10px;
+  float:left;
+  width: 100%;
+    height: auto;
+}
+
+.second-image {
+  margin-left:auto;
+  margin-right:auto;
+  float:right;
+  width: 100%;
+    height: auto;
+}
