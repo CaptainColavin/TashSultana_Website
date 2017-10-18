@@ -1,80 +1,90 @@
-<!DOCTYPE html>
-<html lang="{{ app()->getLocale() }}">
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>Tash Sultana</title>
 
-    <!-- CSRF Token -->
-    <meta name="csrf-token" content="{{ csrf_token() }}">
+        <!-- import de librairies -->
+        <script
+          src="https://code.jquery.com/jquery-3.2.1.min.js"
+          integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+          crossorigin="anonymous"></script>
+        <script src="https://www.youtube.com/iframe_api"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
-    <title>{{ config('app.name', 'Laravel') }}</title>
+        <!-- import de CSS -->
+        <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="./css/contact.css">
+        <!--<link rel="stylesheet" type="text/css" href="./css/about.css">-->
+        <link rel="stylesheet" type="text/css" href="./css/countdown.css">
+        <link rel="stylesheet" type="text/css" href="./css/style.css">
+        <link rel="stylesheet" type="text/css" href="./css/music.css">
 
-    <!-- Styles -->
-    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-</head>
-<body>
-    <div id="app">
-        <nav class="navbar navbar-default navbar-static-top">
-            <div class="container">
-                <div class="navbar-header">
 
-                    <!-- Collapsed Hamburger -->
-                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#app-navbar-collapse">
-                        <span class="sr-only">Toggle Navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
+    </head>
 
-                    <!-- Branding Image -->
-                    <a class="navbar-brand" href="{{ url('/') }}">
-                        {{ config('app.name', 'Laravel') }}
-                    </a>
+    <body style="background-image:url(BackgroundTS.png); background-repeat: no-repeat; background-size: cover;">
+        <div class="row">
+          <div class="span12"> <img src="TSTitle.png" alt="TashSultanaTitle" style="width: 504px; height: 76px; object-fit: cover; text-align: center; margin-right: auto; margin-left: auto; display: block; margin-bottom: 10px;"> </div>
+        </div>
+        <div class="row">
+            <div class="container-fluid">
+
+                <div class="col-md-2 col-md-offset-2" id="col-side">
+                  <iframe src="https://open.spotify.com/embed?uri=spotify:album:7JV505O1I9Sc3uHtFEFtkf" width="250" height="380" frameborder="0" allowtransparency="true"></iframe>
+                  <br/>
+                  <iframe src="https://open.spotify.com/embed?uri=spotify:album:00yAwDfu7JLRlhvHSchMzu" width="250" frameborder="0" allowtransparency="true"></iframe>
                 </div>
 
-                <div class="collapse navbar-collapse" id="app-navbar-collapse">
-                    <!-- Left Side Of Navbar -->
-                    <ul class="nav navbar-nav">
-                        &nbsp;
-                    </ul>
 
-                    <!-- Right Side Of Navbar -->
-                    <ul class="nav navbar-nav navbar-right">
-                        <!-- Authentication Links -->
-                        @if (Auth::guest())
-                            <li><a href="{{ route('login') }}">Login</a></li>
-                            <li><a href="{{ route('register') }}">Register</a></li>
-                        @else
-                            <li class="dropdown">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-                                    {{ Auth::user()->name }} <span class="caret"></span>
-                                </a>
+                <div class="col-md-8 col-md-offset-2" id="col">
+                    <nav class="navbar my_nav" id="nav">
+                          <!-- Brand and toggle get grouped for better mobile display -->
+                          <?php /*<div class="navbar-header">
+                            Bonjour
+                          </div>*/ ?>
+                        <!-- Brand and toggle get grouped for better mobile display -->
+                        <ul role="tablist" id="navbar">
+                          <li role="presentation"><a href="/home" class="active" >Home<span class="sr-only">(current)</span></a></li>
+                          <li><a href='/music'>Music</a></li>
+                          <li role="presentation"><a href="#tour" aria-controls="tour" role="tab" data-toggle="tab">Tour</a></li>
+                          <li role="presentation"><a href="https://24hundred.net/collections/tash-sultana?Tash+Sultana+Store" target="_blank">Store</a></li>
+                          <li role="presentation"><a href="#contact" aria-controls="contact" role="tab" data-toggle="tab">Contact</a></li>
+                          <li role="presentation"><a href="#about" aria-controls="about" role="tab" data-toggle="tab">About</a></li>
+                          <li role="presentation"><a href="#livre" aria-controls="livre" role="tab" data-toggle="tab">Livre d'or</a></li>
+                        </ul>
+                    </nav>
 
-                                <ul class="dropdown-menu" role="menu">
-                                    <li>
-                                        <a href="{{ route('logout') }}"
-                                            onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit();">
-                                            Logout
-                                        </a>
+                    <div class="center">
+                      <div class="tab-content">
+                        <section>
+                            @yield('music')
+                        </section>
 
-                                        <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                                            {{ csrf_field() }}
-                                        </form>
-                                    </li>
-                                </ul>
-                            </li>
-                        @endif
-                    </ul>
+                      </div>
+                    </div>
+
                 </div>
+
+                <div class="col-md-2 col-md-offset-2" id="col-side">
+                  <a href="https://www.facebook.com/tashsultanamusic/" target="_blank">
+                    <img src="FacebookLogo.png" alt="Logo Instagram">
+                  </a> <br/>
+                  <a href="https://www.instagram.com/tashsultanaofficial/" target="_blank">
+                    <img src="InstaLogo.png" alt="Logo Instagram"> <br/>
+                  </a>
+                  <a href="https://twitter.com/tashsultanaa" target="_blank">
+                    <img src="TwitterLogo.png" alt="Logo Twitter"> <br/>
+                  </a>
+                  <a href="https://www.youtube.com/user/tashsultana01" target="_blank">
+                    <img src="YTLogo.png" alt="Logo Youtube"> <br/>
+                  </a>
+                </div>
+
             </div>
-        </nav>
+        </div>
 
-        @yield('content')
-    </div>
+        <script src="./js/music.js"></script>
 
-    <!-- Scripts -->
-    <script src="{{ asset('js/app.js') }}"></script>
-</body>
+    </body>
 </html>

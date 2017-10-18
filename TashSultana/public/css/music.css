@@ -35,19 +35,19 @@
 .music {
     padding-top: 50px;
     background-size: cover;
-    background-image: url('../../images/music-music.jpg');
+    background-image: url('../images/music-music.jpg');
 }
 
 .live {
     padding-top: 50px;
     background-size: cover;
-    background-image: url('../../images/music-live.jpg');
+    background-image: url('../images/music-live.jpg');
 }
 
 .live-bed {
     padding-top: 50px;
     background-size: cover;
-    background-image: url('../../images/music-bedroom.jpg');
+    background-image: url('../images/music-bedroom.jpg');
 }
 
 .player-container {
