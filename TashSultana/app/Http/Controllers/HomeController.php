@@ -8,13 +8,23 @@ use DateTime;
 class HomeController extends Controller
 {
 
+
+    public static function TimeFormat($date) 
+    {
+    date_default_timezone_set("Europe/Paris");
+    $time = DateTime::createFromFormat('Y-m-d\TH:i:sP', $date);
+    $raw = $time->format(DateTime::RFC850);
+
+    return $raw;
+    }   
+
     /**
      * Show the application dashboard.
      *
      * @return \Illuminate\Http\Response
      */
     public function index()
-    {   
+    {
       $json = file_get_contents('http://api.songkick.com/api/3.0/artists/5112228/calendar.json?apikey=5OnUMhFOovUJseOG');
 
       $array = json_decode($json);
@@ -24,7 +34,9 @@ class HomeController extends Controller
           $tours[$key]=$value;
       }
 
-        return view("home")->with(array('tours'=>$tours));
+      $nextTour = $this->TimeFormat($tours[0]->start->datetime);
+        
+       return view("home")->with(array('tours'=>$tours, 'nextTour'=>$nextTour));
     }
 
     /*return the MUSIC template*/
