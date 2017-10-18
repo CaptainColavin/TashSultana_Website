@@ -1,4 +1,6 @@
+@extends('layouts.app')
 
+@section('music')
 <div id="music" class="tab-pane fade in">
     <!-- MUSIC A RECOPIER DANS UN FICHIER A PART -->
     <div class="category-container" >
@@ -24,3 +26,4 @@
     </div>
     <!-- MUSIC A RECOPIER DANS UN FICHIER A PART -->
 </div>
+@stop

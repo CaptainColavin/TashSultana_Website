@@ -23,6 +23,8 @@
       <td>
         {{ $comment->date }}
       </td>
+      <td>
+        {{ $comment->user_id}}
     </tr>
     @endforeach
     </tbody>
