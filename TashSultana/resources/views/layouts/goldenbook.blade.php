@@ -3,6 +3,7 @@
 @section('content')
 <h1>Guestbook</h1>
 <div class="comment-container">
+    @if (count($goldenbook) > 0)
     <table class="table">
         <thead>
             <tr>
@@ -24,17 +25,20 @@
         @endforeach
         </tbody>
     </table>
+    @else
+        <div class="no-comment"> <span class="glyphicon glyphicon-thumbs-up"></span> Be the first to write a comment ! </div>
+    @endif
 </div>
 @if (Auth::check())
-<form action="/guestbook" method="POST">
-    {{csrf_field()}}
-    <label for="text">Comment :</label>
-    <textarea class="form-control comment-text-area" id="textArea" name="text" rows="5"></textarea>
+    <form action="/guestbook" method="POST">
+        {{csrf_field()}}
+        <label for="text">Comment :</label>
+        <textarea class="form-control comment-text-area" id="textArea" name="text" rows="5"></textarea>
 
-    <button type="submit" class="btn">Submit</button>
-</form>
+        <button type="submit" class="btn"> <span class="glyphicon glyphicon-pencil btn-icon"></span>Submit</button>
+    </form>
 @else
-<p>Please login to post a comment.</p>
+    <p>Please login to post a comment.</p>
 @endif
 
 @stop
