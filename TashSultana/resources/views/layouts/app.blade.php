@@ -19,6 +19,7 @@
         <link rel="stylesheet" type="text/css" href="./css/countdown.css">
         <link rel="stylesheet" type="text/css" href="./css/style.css">
         <link rel="stylesheet" type="text/css" href="./css/music.css">
+        <link rel="stylesheet" type="text/css" href="./css/register.css">
 
 
     </head>
