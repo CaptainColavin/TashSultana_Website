@@ -63,7 +63,7 @@
 							<div class="cols-sm-10">
 								<div class="input-group">
 									<span class="input-group-addon"><i class="fa fa-lock fa-lg" aria-hidden="true"></i></span>
-									<input type="password" name="confirm-password" id="confirm-password" tabindex="2" class="form-control" placeholder="Confirm Password" required>
+									<input type="password"  id="confirm-password" tabindex="2" class="form-control" placeholder="Confirm Password" name="password_confirmation" required>
 								</div>
 							</div>
 						</div>
