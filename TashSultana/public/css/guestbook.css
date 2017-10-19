@@ -1,11 +1,15 @@
 .comment-container {
     margin-bottom: 50px;
     border: solid 1px white;
-    padding: 20px 10px 20px 10px;
+
     max-height: 550px;
-    background-color: #464646;
+    background-color: #3a3939;
     overflow-y: scroll;
 
+}
+
+.table-header {
+    background-color: #5a5a5a;
 }
 
 .title-user {

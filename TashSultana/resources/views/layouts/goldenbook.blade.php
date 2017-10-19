@@ -5,7 +5,7 @@
 <div class="comment-container">
     @if (count($goldenbook) > 0)
     <table class="table">
-        <thead>
+        <thead class="table-header">
             <tr>
                 <th class="title-user">User</th>
                 <th class="title-comment">Comment</th>
