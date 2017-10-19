@@ -1,8 +1,10 @@
 @extends('layouts.app')
 
 @section('content')
-  <table>
-    <thead>
+<h1>Golden Book</h1>
+<div class="table-responsive">
+  <table class="table table-striped table-data">
+    <thead style="background-color: #DCDCDC; color: black;">
       <tr>
         <th>Comment</th>
         <th>Date</th>
@@ -20,23 +22,22 @@
       </td>
       <td>
         {{ $comment->user->name }}
+      </td>
     </tr>
     @endforeach
     </tbody>
   </table>
 
   @if (Auth::check())
-    <form action="/goldenbook" method="POST">
+      <form action="/goldenbook" method="POST">
       {{csrf_field()}}
-      <div>
-        <label for="text">Comment:</label>
-        <textarea id="textArea" name="text" rows="5"></textarea>
-      </div>
-      <br>
-      <button type="submit">Submit</button>
+      <label for="text">Comment :</label>
+      <textarea class ="form-control" id="textArea" name="text" rows="5"></textarea>
+    <br>
+    <button type="submit" class="btn">Submit</button>
     </form>
   @else
     <p>Please login to post a comment.</p>
   @endif
-
+</div>
 @stop

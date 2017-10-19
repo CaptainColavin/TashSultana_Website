@@ -12,13 +12,8 @@
 */
 
 Route::get('/', function () {
-    //return view('welcome');
     return redirect('/home');
 });
-
-/*Route::get('/test', function () {
-  return redirect('/test.php');
-});*/
 
 Auth::routes();
 // Permet de se logout via /logout (Pour test)
