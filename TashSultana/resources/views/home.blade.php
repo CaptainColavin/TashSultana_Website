@@ -25,7 +25,7 @@
       </ul>
     </div>
     <div class="bottom" style="left: 0px;">
-      <img src="./powered-by-songkick-white.png" class="songkick-logo">
+      <a href="https://www.songkick.com/" target="_blank"><img src="./powered-by-songkick-white.png" class="songkick-logo"></a>
     </div>
     <div class="bottom">
       <a href="https://www.songkick.com/artists/5112228-tash-sultana" target="_blank"><button type="button" class="button button1">Buy Ticket</button></a>
