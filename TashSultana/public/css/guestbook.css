@@ -1,13 +1,14 @@
 .comment-container {
-    border: solid 1px red;
+    border: solid 1px white;
     padding: 20px 10px 20px 10px;
     max-height: 550px;
-
+    overflow-y: scroll;
 
 }
 
 .title-user {
-
+    width: 25%;
+    text-align: left;
 }
 
 .title-comment {
@@ -15,9 +16,21 @@
 }
 
 .user-infos {
+    text-align: left;
+}
 
+.user-name {
+    display: block;
+}
+
+.user-date {
+    display: block;
 }
 
 .user-comment {
-    
+    text-align: justify;
+}
+
+.comment-text-area {
+    resize: none;
 }
