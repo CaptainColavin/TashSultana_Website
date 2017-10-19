@@ -10,14 +10,15 @@
 	               	</div>
 	            </div>
 				<div class="main-login main-center">
-					<form id="register-form" action="{{ route('register') }}" method="post" role="form">
 
+					<form id="register-form" action="{{ route('register') }}" method="post" role="form">
+					{{ csrf_field() }}
             <div class="form-group{{ $errors->has('name') ? ' has-error' : '' }}">
-              <label for="username" class="cols-sm-2 control-label">Username</label>
+              <label for="name" class="cols-sm-2 control-label">Username</label>
               <div class="cols-sm-10">
                 <div class="input-group">
                   <span class="input-group-addon"><i class="fa fa-users fa" aria-hidden="true"></i></span>
-                  <input type="text" class="form-control" name="username" id="username"  placeholder="Username" value="{{ old('name') }}" required autofocus>
+                  <input type="text" class="form-control" name="name" id="name"  placeholder="name" value="{{ old('name') }}" required autofocus>
                   @if ($errors->has('name'))
                       <span class="help-block">
                           <strong>{{ $errors->first('name') }}</strong>
