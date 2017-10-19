@@ -12,13 +12,8 @@
 */
 
 Route::get('/', function () {
-    //return view('welcome');
     return redirect('/home');
 });
-
-/*Route::get('/test', function () {
-  return redirect('/test.php');
-});*/
 
 Auth::routes();
 // Permet de se logout via /logout (Pour test)
@@ -26,7 +21,7 @@ Route::get('logout', 'Auth\LoginController@logout');
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-Route::resource('goldenbook', 'goldenbookController');
+Route::resource('goldenbook', 'goldenbookController', ['only' => ['index', 'store']]);
 
 Route::get('/music', 'homeController@music');
 Route::get('/contact', 'homeController@contact');

@@ -13,7 +13,8 @@ class goldenbookController extends Controller {
      */
     public function index()
     {
-    	$goldenbook = goldenbook::all();
+    	$goldenbook = goldenbook::all()
+        ->sortByDesc('date');
         return view('layouts.goldenbook', compact('goldenbook'));
     }
 
