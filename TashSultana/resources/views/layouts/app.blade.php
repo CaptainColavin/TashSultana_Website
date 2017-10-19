@@ -45,7 +45,7 @@
                           </div>*/ ?>
                         <!-- Brand and toggle get grouped for better mobile display -->
                         <ul role="tablist" id="navbar">
-                          <li role="presentation"><a href="/home" class="active" >Home<span class="sr-only">(current)</span></a></li>
+                          <li role="presentation"><a href="/home">Home<span class="sr-only">(current)</span></a></li>
                           <li><a href='/music'>Music</a></li>
                           <li role="presentation"><a href="/tour">Tour</a></li>
                           <li role="presentation"><a href="https://24hundred.net/collections/tash-sultana?Tash+Sultana+Store" target="_blank">Store</a></li>
@@ -85,6 +85,7 @@
         </div>
         <script src="./js/countdown.js"></script>
         <script src="./js/music.js"></script>
+        <script src="./js/nav.js"></script>
 
     </body>
 </html>

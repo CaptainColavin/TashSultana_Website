@@ -25,5 +25,6 @@
       </tbody>
     </table>
 </div>
+<a href="https://www.songkick.com/" target="_blank"><img src="powered-by-songkick-white.png" class="songkick-logo" style="float: right;"></a>
 
 @stop
