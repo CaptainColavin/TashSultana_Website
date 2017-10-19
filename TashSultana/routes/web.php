@@ -13,7 +13,7 @@
 
 Route::get('/', function () {
     //return view('welcome');
-    return redirect('/homepage.php');
+    return redirect('/home');
 });
 
 /*Route::get('/test', function () {
