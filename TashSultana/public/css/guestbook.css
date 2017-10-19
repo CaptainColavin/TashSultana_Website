@@ -1,10 +1,10 @@
 .comment-container {
     margin-bottom: 50px;
     border: solid 1px white;
-
     max-height: 550px;
     background-color: #3a3939;
     overflow-y: scroll;
+    overflow-x: hidden;
 
 }
 
@@ -35,6 +35,7 @@
 
 .user-comment {
     text-align: justify;
+    word-break: break-all;
 }
 
 .comment-text-area {
