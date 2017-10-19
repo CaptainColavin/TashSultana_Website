@@ -41,6 +41,6 @@ class goldenbookController extends Controller {
     	$goldenbook->date = date("Y-m-d H:i:s");
     	$goldenbook->user_id = $user->id;
     	$goldenbook->save();
-    	return redirect('goldenbook');
+    	return redirect('guestbook');
     }
 }
