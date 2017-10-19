@@ -19,6 +19,7 @@
         <link rel="stylesheet" type="text/css" href="./css/countdown.css">
         <link rel="stylesheet" type="text/css" href="./css/style.css">
         <link rel="stylesheet" type="text/css" href="./css/music.css">
+        <link rel="stylesheet" type="text/css" href="./css/guestbook.css">
 
 
     </head>
@@ -51,7 +52,7 @@
                           <li role="presentation"><a href="https://24hundred.net/collections/tash-sultana?Tash+Sultana+Store" target="_blank">Store</a></li>
                           <li role="presentation"><a href="/contact">Contact</a></li>
                           <li role="presentation"><a href="/about">About</a></li>
-                          <li role="presentation"><a href="/goldenbook">Golden Book</a></li>
+                          <li role="presentation"><a href="/guestbook">Guestbook</a></li>
                         </ul>
                     </nav>
 

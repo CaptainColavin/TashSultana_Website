@@ -26,7 +26,7 @@ Route::get('logout', 'Auth\LoginController@logout');
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-Route::resource('goldenbook', 'goldenbookController', ['only' => ['index', 'store']]);
+Route::resource('guestbook', 'goldenbookController', ['only' => ['index', 'store']]);
 
 Route::get('/music', 'homeController@music');
 Route::get('/contact', 'homeController@contact');
