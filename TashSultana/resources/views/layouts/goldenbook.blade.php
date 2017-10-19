@@ -2,40 +2,35 @@
 
 @section('content')
 <h1>Guestbook</h1>
-<div class="comment-container">
-    @if (count($goldenbook) > 0)
-    <table class="table">
-        <thead class="table-header">
-            <tr>
-                <th class="title-user">User</th>
-                <th class="title-comment">Comment</th>
-            </tr>
-        </thead>
-        <tbody>
-            @foreach($goldenbook as $comment)
-            <tr>
-                <td class="user-infos">
-                    <div class="user-name">{{ $comment->user->name }}</div>
-                    <div class="user-date">{{ $comment->date }}</div>
-                </td>
-                <td class="user-comment">
-                    {{ $comment->text }}
-                </td>
-            </tr>
+
+<div class="table-responsive">
+    <table class="table table-spacing">
+      <thead style="background-color: #DCDCDC; color: black;">
+        <tr>
+            <th>User</th>
+            <th>Comment</th>
+        </tr>
+      </thead>
+      <tbody style="overflow-y: scroll;">
+        @foreach($goldenbook as $comment)
+
+          <tr class="table-color my_table-border">
+            <td style="width:20%;"><div class="user-name">{{ $comment->user->name }}</div>
+            <div class="user-date">{{ $comment->date }}</div></td>
+            <td class="user-comment"><div class="scroll-comment">{{ $comment->text }}</div></td>
+          </tr>
+
         @endforeach
-        </tbody>
+      </tbody>
     </table>
-    @else
-        <div class="no-comment"> <span class="glyphicon glyphicon-thumbs-up"></span> Be the first to write a comment ! </div>
-    @endif
 </div>
 @if (Auth::check())
     <form action="/guestbook" method="POST">
         {{csrf_field()}}
         <label for="text">Comment :</label>
-        <textarea class="form-control comment-text-area" id="textArea" name="text" rows="5"></textarea>
+        <textarea  class="form-control comment-text-area" id="textArea" name="text" rows="5" required></textarea>
 
-        <button type="submit" class="btn"> <span class="glyphicon glyphicon-pencil btn-icon"></span>Submit</button>
+        <button type="submit" class="btn"> <span class="glyphicon glyphicon-send btn-icon"></span>Submit</button>
     </form>
 @else
     <p>Please login to post a comment.</p>

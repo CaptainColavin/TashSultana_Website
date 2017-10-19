@@ -15,6 +15,13 @@ class goldenbookController extends Controller {
     {
     	$goldenbook = goldenbook::all()
         ->sortByDesc('date');
+
+        foreach ($goldenbook as $comment){
+            $tmp = $comment->date;
+            $date = date('F-d-Y', strtotime($tmp));
+            $comment->date = str_replace('-', ' ', $date);
+        }
+
         return view('layouts.goldenbook', compact('goldenbook'));
     }
 

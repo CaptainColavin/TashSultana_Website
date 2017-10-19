@@ -1,17 +1,8 @@
-.comment-container {
-    margin-bottom: 50px;
-    border: solid 1px white;
-
-    max-height: 550px;
-    background-color: #3a3939;
-    overflow-y: scroll;
-
-}
-
-table {
+.table-spacing {
     border-collapse: separate;
     border-spacing: 0px 10px;
 }
+
 .table-header {
     background-color: #DCDCDC;
     color: black;
@@ -39,9 +30,8 @@ table {
 }
 
 .user-comment {
-    text-align: center;
-    overflow-y: scroll;
-    width: 70%;
+    text-align: justify;
+    word-break: break-all;
 }
 
 .comment-text-area {
@@ -55,4 +45,20 @@ table {
 
 .btn-icon {
     margin-right: 4px;
+}
+
+.scroll-comment {
+  overflow-y: scroll;
+  overflow-x: hidden;
+  max-height: 150px;
+  padding: 20px;
+  padding-top: 0px;
+}
+
+tr.my_table-border td{
+  border: 1px solid #ddd;
+}
+.table-color {
+  background-color: #333;
+  color:white;
 }
