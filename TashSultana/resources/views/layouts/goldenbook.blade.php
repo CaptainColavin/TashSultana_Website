@@ -33,9 +33,9 @@
     <form action="/guestbook" method="POST">
         {{csrf_field()}}
         <label for="text">Comment :</label>
-        <textarea class="form-control comment-text-area" id="textArea" name="text" rows="5"></textarea>
+        <textarea  class="form-control comment-text-area" id="textArea" name="text" rows="5" required></textarea>
 
-        <button type="submit" class="btn"> <span class="glyphicon glyphicon-pencil btn-icon"></span>Submit</button>
+        <button type="submit" class="btn"> <span class="glyphicon glyphicon-send btn-icon"></span>Submit</button>
     </form>
 @else
     <p>Please login to post a comment.</p>
