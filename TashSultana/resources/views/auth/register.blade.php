@@ -18,7 +18,7 @@
               <div class="cols-sm-10">
                 <div class="input-group">
                   <span class="input-group-addon"><i class="fa fa-users fa" aria-hidden="true"></i></span>
-                  <input type="text" class="form-control" name="name" id="name"  placeholder="name" value="{{ old('name') }}" required autofocus>
+                  <input type="text" class="form-control" tabindex="1" name="name" id="name"  placeholder="Username" value="{{ old('name') }}" required autofocus>
                   @if ($errors->has('name'))
                       <span class="help-block">
                           <strong>{{ $errors->first('name') }}</strong>

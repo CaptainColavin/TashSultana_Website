@@ -1,5 +1,5 @@
 .btn-register {
-	background-color: #1CB94E;
+	background-color: #663399;
 	outline: none;
 	color: #fff;
 	font-size: 14px;
@@ -7,11 +7,37 @@
 	font-weight: normal;
 	padding: 14px 0;
 	text-transform: uppercase;
-	border-color: #1CB94A;
+	border-color: #663399;
 }
 .btn-register:hover,
 .btn-register:focus {
 	color: #fff;
-	background-color: #1CA347;
-	border-color: #1CA347;
+	background-color: #FFA500;
+	border-color: #FFA500;
+}
+
+.form-group a {
+  color: #FFA500;
+  font-weight: bold;
+}
+
+.form-group a:hover,
+.form-group a:focus{
+  color: #FFFFFF;
+  font-weight: bold;
+}
+
+.login-register a {
+  color: #FFA500;
+  font-weight: bold;
+}
+
+.login-register a:hover,
+.login-register a:focus{
+  color: #FFFFFF;
+  font-weight: bold;
+}
+
+.input-group .has-error .input-group-addon {
+  height:50px;
 }

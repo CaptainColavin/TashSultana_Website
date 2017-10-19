@@ -8,8 +8,17 @@
 
 }
 
+table {
+    border-collapse: separate;
+    border-spacing: 0px 10px;
+}
 .table-header {
-    background-color: #5a5a5a;
+    background-color: #DCDCDC;
+    color: black;
+}
+
+.table-header th{
+  text-align: center;
 }
 
 .title-user {
@@ -17,12 +26,8 @@
     text-align: left;
 }
 
-.title-comment {
-
-}
-
 .user-infos {
-    text-align: left;
+    text-align: center;
 }
 
 .user-name {
@@ -34,7 +39,9 @@
 }
 
 .user-comment {
-    text-align: justify;
+    text-align: center;
+    overflow-y: scroll;
+    width: 70%;
 }
 
 .comment-text-area {
