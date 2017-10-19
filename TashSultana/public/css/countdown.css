@@ -104,3 +104,10 @@ padding: 3% 5% 3% 5%;
     background-color: #FFA500;
     color: white;
 }
+
+.songkick-logo {
+  height: auto;
+  width: 15%;
+  float:left;
+  margin-left: 10px;
+}

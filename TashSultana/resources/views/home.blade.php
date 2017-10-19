@@ -24,7 +24,12 @@
         <li class="countdownValues">Seconds</li>
       </ul>
     </div>
-    <div class="bottom"><a href="https://www.songkick.com/artists/5112228-tash-sultana" target="_blank"><button type="button" class="button button1">Buy Ticket</button></a></div>
+    <div class="bottom" style="left: 0px;">
+      <img src="./powered-by-songkick-white.png" class="songkick-logo">
+    </div>
+    <div class="bottom">
+      <a href="https://www.songkick.com/artists/5112228-tash-sultana" target="_blank"><button type="button" class="button button1">Buy Ticket</button></a>
+    </div>
 </div>
 <hr>
 <div class="embed-responsive embed-responsive-16by9">

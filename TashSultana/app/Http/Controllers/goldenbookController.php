@@ -14,8 +14,7 @@ class goldenbookController extends Controller {
     public function index()
     {
     	$goldenbook = goldenbook::all();
-    	//To do
-        return view('goldenbook.comment', compact('goldenbook'));
+        return view('layouts.goldenbook', compact('goldenbook'));
     }
 
     /**
@@ -25,7 +24,7 @@ class goldenbookController extends Controller {
      */
     public function create()
     {
-        return view('goldenbook.comment');
+        return view('layouts.goldenbook');
     }
 
     /**
@@ -43,5 +42,4 @@ class goldenbookController extends Controller {
     	$goldenbook->save();
     	return redirect('goldenbook');
     }
-
 }
