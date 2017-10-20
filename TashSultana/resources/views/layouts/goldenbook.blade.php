@@ -6,7 +6,7 @@
 <a href="/logout"><button type=button name="logout" class="button button1 auth-button">Logout</button></a>
 @else
 <a href="/login"><button type=button name="login" class="button button1 auth-button">Login</button></a>
-<a href="/register"><button type=button name="login" class="button button1 auth-button">Register</button><a>
+<a href="/register"><button type=button name="login" class="button button1 auth-button">Register</button></a>
 @endif
 <div class="table-responsive">
     <table class="table table-spacing">
