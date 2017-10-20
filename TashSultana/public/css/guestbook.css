@@ -62,3 +62,8 @@ tr.my_table-border td{
   background-color: #333;
   color:white;
 }
+
+.auth-button {
+  float: right;
+  margin-right: 10px;
+}

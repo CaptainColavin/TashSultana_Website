@@ -10,14 +10,14 @@ class HomeController extends Controller
 
     public $tours;
 
-    private static function TimeFormat($date) 
+    private static function TimeFormat($date)
     {
     date_default_timezone_set("Europe/Paris");
     $time = DateTime::createFromFormat('Y-m-d\TH:i:sP', $date);
     $raw = $time->format(DateTime::RFC850);
 
     return $raw;
-    }   
+    }
 
     private function getTourFromApi() {
         $json = file_get_contents('http://api.songkick.com/api/3.0/artists/5112228/calendar.json?apikey=5OnUMhFOovUJseOG');
@@ -28,7 +28,7 @@ class HomeController extends Controller
         foreach ($array->resultsPage->results->event as $key => $value) {
             $tmp[$key]=$value;
         }
-        
+
         $this->tours = $tmp;
     }
 
@@ -67,5 +67,10 @@ class HomeController extends Controller
     public function about()
     {
         return view('layouts.about');
+    }
+
+    public function reset()
+    {
+        return view('auth.passwords.reset');
     }
 }

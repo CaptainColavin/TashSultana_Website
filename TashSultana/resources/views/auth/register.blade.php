@@ -72,7 +72,7 @@
 							<button type="submit" name="register-submit" id="register-submit" tabindex="4" class="form-control btn btn-register">Register Now</button>
 						</div>
 						<div class="login-register">
-				            <a href="/goldenbook" style="float:left">Return to the Golden Book page</a> <a href="/login" style="float:right">Login</a>
+				            <a href="/guestbook" style="float:left">Return to the Golden Book page</a> <a href="/login" style="float:right">Login</a>
 				         </div>
 					</form>
 				</div>
